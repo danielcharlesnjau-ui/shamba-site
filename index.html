@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilimo na Mifugo Hub | Shamba Kidijitali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Shamba<span>Kidijitali</span></h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <li><a href="#maoni" data-sw="Toa Maoni" data-en="Feedback">Toa Maoni</a></li>
+                <!-- KITUFE CHA KUBADILISHA LUGHA -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. HERO SECTION (SLIDE SHOW) -->
+    <section id="home" class="hero-slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="kilimo-kwanza.jpg" alt="Kilimo cha Mazao">
+                <div class="slide-content">
+                    <h1 data-sw="Karibu Kwenye Kilimo cha Kisasa" data-en="Welcome to Modern Farming">Karibu Kwenye Kilimo cha Kisasa</h1>
+                    <p data-sw="Jifunze faida, hasara, na mbinu bora za kuongeza mavuno." data-en="Learn the benefits, drawbacks, and best practices to maximize yield.">Jifunze faida, hasara, na mbinu bora za kuongeza mavuno.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="kuku-bata.jpg" alt="Ufugaji wa Kuku na Bata">
+                <div class="slide-content">
+                    <h1 data-sw="Ufugaji wa Kuku & Bata" data-en="Poultry Farming (Chickens & Ducks)">Ufugaji wa Kuku & Bata</h1>
+                    <p data-sw="Kabili magonjwa ya ndege na dhibiti hasara mapema." data-en="Combat poultry diseases and control losses early.">Kabili magonjwa ya ndege na dhibiti hasara mapema.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="mbwa-bora.jpg" alt="Ufugaji wa Mbwa">
+                <div class="slide-content">
+                    <h1 data-sw="Usimamizi wa Afya ya Mbwa" data-en="Dog Health Management">Usimamizi wa Afya ya Mbwa</h1>
+                    <p data-sw="Mwongozo kamili wa chanjo, chakula, na matunzo ya mbwa wako." data-en="A complete guide on vaccines, feeding, and caring for your dog.">Mwongozo kamili wa chanjo, chakula, na matunzo ya mbwa wako.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+    </section>
+
+    <!-- 3. DHUMUNI LA TOVUTI (MISSION STATEMENT) -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <h2 data-sw="Dhumuni Letu Kuu 🎯" data-en="Our Main Mission 🎯">Dhumuni Letu Kuu 🎯</h2>
+            <p data-sw="Shamba Kidijitali ni jukwaa huru lililoundwa maalum kutoa mwongozo na elimu ya kina ya kilimo na ufugaji bora nchini Tanzania. Lengo letu ni kumsaidia mkulima na mfugaji wa ngazi zote kupata maarifa sahihi yatakayomwongezea faida na kupunguza hasara." 
+               data-en="Shamba Kidijitali is an open platform custom-built to provide in-depth crop and livestock farming education in Tanzania. Our goal is to help farmers of all levels gain precise knowledge to increase profits and reduce losses.">
+                Shamba Kidijitali ni jukwaa huru lililoundwa maalum kutoa mwongozo na elimu ya kina ya kilimo na ufugaji bora nchini Tanzania. Lengo letu ni kumsaidia mkulima na mfugaji wa ngazi zote kupata maarifa sahihi yatakayomwongezea faida na kupunguza hasara.
+            </p>
+            <div class="features-badges">
+                <span data-sw="📚 Elimu ya Ndani" data-en="📚 In-depth Guides">📚 Elimu ya Ndani</span>
+                <span data-sw="🦠 Tiba za Magonjwa" data-en="🦠 Disease Control">🦠 Tiba za Magonjwa</span>
+                <span data-sw="🏗️ Ramani za Mabanda" data-en="🏗️ Structure Layouts">🏗️ Ramani za Mabanda</span>
+                <span data-sw="📈 Ushauri wa Soko" data-en="📈 Market Advice">📈 Ushauri wa Soko</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. QUICK LINKS GRID -->
+    <section id="mifugo" class="category-section">
+        <div class="section-title">
+            <h2 data-sw="Chagua Sekta Unayotaka Kusoma" data-en="Select a Sector to Learn">Chagua Sekta Unayotaka Kusoma</h2>
+            <p data-sw="Bofya kadi yoyote kupata maelezo ya ndani, miongozo ya chakula, tiba na mazingira yao." data-en="Click any card to read in-depth details, feeding guides, treatments, and housing.">Bofya kadi yoyote kupata maelezo ya ndani, miongozo ya chakula, tiba na mazingira yao.</p>
+        </div>
+        
+                <div class="grid-container">
+            <!-- 1. Kadi ya Kuku -->
+            <div class="card">
+                <div class="card-icon">🐔</div>
+                <h3 data-sw="Ufugaji wa Kuku" data-en="Chicken Farming">Ufugaji wa Kuku</h3>
+                <p><strong data-sw="Faida:" data-en="Benefits:">Faida:</strong> <span data-sw="Mayai, nyama, na mbolea ya haraka." data-en="Eggs, meat, and quick organic manure.">Mayai, nyama, na mbolea ya haraka.</span></p>
+                <p><strong data-sw="Hasara:" data-en="Drawbacks:">Hasara:</strong> <span data-sw="Hupatwa na magonjwa ya mlipuko haraka (kideri)." data-en="Highly prone to disease outbreaks (Newcastle).">Hupatwa na magonjwa ya mlipuko haraka (kideri).</span></p>
+                <p><strong data-sw="Mazingira:" data-en="Housing:">Mazingira:</strong> <span data-sw="Banda safi, kavu, lisiloingiza upepo mkali wa baridi." data-en="Clean, dry coop protected from harsh cold winds.">Banda safi, kavu, lisiloingiza upepo mkali wa baridi.</span></p>
+                <a href="kuku.html" class="card-btn" data-sw="Soma Elimu ya Kuku" data-en="Read Poultry Guide">Soma Elimu ya Kuku</a>
+            </div>
+
+            <!-- 2. Kadi ya Bata -->
+            <div class="card">
+                <div class="card-icon">🦆</div>
+                <h3 data-sw="Ufugaji wa Bata" data-en="Duck Farming">Ufugaji wa Bata</h3>
+                <p><strong data-sw="Faida:" data-en="Benefits:">Faida:</strong> <span data-sw="Wanaustahimilivu mkubwa wa magonjwa na soko zuri." data-en="Highly disease resistant and have a good market.">Wanaustahimilivu mkubwa wa magonjwa na soko zuri.</span></p>
+                <p><strong data-sw="Hasara:" data-en="Drawbacks:">Hasara:</strong> <span data-sw="Wanatumia chakula kingi na wanahitaji maji mengi." data-en="They consume a lot of food and require plenty of water.">Wanatumia chakula kingi na wanahitaji maji mengi.</span></p>
+                <p><strong data-sw="Mazingira:" data-en="Housing:">Mazingira:</strong> <span data-sw="Sehemu yenye kivuli na bwawa au eneo la wazi lenye maji." data-en="Shaded area with a pond or open space with water.">Sehemu yenye kivuli na bwawa au eneo la wazi lenye maji.</span></p>
+                <a href="bata.html" class="card-btn" data-sw="Soma Elimu ya Bata" data-en="Read Duck Guide">Soma Elimu ya Bata</a>
+            </div>
+
+            <!-- 3. Kadi ya Mbwa -->
+            <div class="card">
+                <div class="card-icon">🐕</div>
+                <h3 data-sw="Ufugaji wa Mbwa" data-en="Dog Breeding">Ufugaji wa Mbwa</h3>
+                <p><strong data-sw="Faida:" data-en="Benefits:">Faida:</strong> <span data-sw="Ulinzi wa uhakika wa shamba na biashara ya watoto." data-en="Reliable farm security and profitable puppy business.">Ulinzi wa uhakika wa shamba na biashara ya watoto.</span></p>
+                <p><strong data-sw="Hasara:" data-en="Drawbacks:">Hasara:</strong> <span data-sw="Gharama kubwa za matunzo, chanjo, na chakula bora." data-en="High maintenance costs, vaccines, and quality food.">Gharama kubwa za matunzo, chanjo, na chakula bora.</span></p>
+                <p><strong data-sw="Mazingira:" data-en="Housing:">Mazingira:</strong> <span data-sw="Banda imara lenye uingizaji mzuri wa hewa na nafasi ya mazoezi." data-en="Sturdy kennel with good ventilation and exercise space.">Banda imara lenye uingizaji mzuri wa hewa na nafasi ya mazoezi.</span></p>
+                <a href="mbwa.html" class="card-btn" data-sw="Soma Elimu ya Mbwa" data-en="Read Dog Guide">Soma Elimu ya Mbwa</a>
+            </div>
+
+            <!-- 4. Kadi ya Mbuzi -->
+            <div class="card">
+                <div class="card-icon">🐐</div>
+                <h3 data-sw="Ufugaji wa Mbuzi" data-en="Goat Farming">Ufugaji wa Mbuzi</h3>
+                <p><strong data-sw="Faida:" data-en="Benefits:">Faida:</strong> <span data-sw="Wanazaa haraka (mapacha), maziwa yenye lishe, na nyama tamu." data-en="Fast reproduction (twins), nutritious milk, and tasty meat.">Wanazaa haraka (mapacha), maziwa yenye lishe, na nyama tamu.</span></p>
+                <p><strong data-sw="Hasara:" data-en="Drawbacks:">Hasara:</strong> <span data-sw="Wana tabia ya kula na kuharibu miti au mazao yasiyolindwa." data-en="Tendency to browse and damage unprotected trees or crops.">Wana tabia ya kula na kuharibu miti au mazao yasiyolindwa.</span></p>
+                <p><strong data-sw="Mazingira:" data-en="Housing:">Mazingira:</strong> <span data-sw="Banda la sakafu ya mbao lililonyanyuka juu ili kuzuia unyevu." data-en="Raised wooden floor shed to prevent ground dampness.">Banda la sakafu ya mbao lililonyanyuka juu ili kuzuia unyevu.</span></p>
+                <a href="mbuzi.html" class="card-btn" data-sw="Soma Elimu ya Mbuzi" data-en="Read Goat Guide">Soma Elimu ya Mbuzi</a>
+            </div>
+
+            <!-- 5. Kadi ya Ng'ombe -->
+            <div class="card">
+                <div class="card-icon">🐄</div>
+                <h3 data-sw="Ufugaji wa Ng'ombe" data-en="Cattle Farming">Ufugaji wa Ng'ombe</h3>
+                <p><strong data-sw="Faida:" data-en="Benefits:">Faida:</strong> <span data-sw="Kipato kikubwa cha maziwa kila siku, nyama, na mbolea nyingi." data-en="High daily milk income, meat, and plenty of manure.">Kipato kikubwa cha maziwa kila siku, nyama, na mbolea nyingi.</span></p>
+                <p><strong data-sw="Hasara:" data-en="Drawbacks:">Hasara:</strong> <span data-sw="Wanahitaji mtaji mkubwa wa kuanza na eneo kubwa la malisho." data-en="Requires a large starting capital and big grazing fields.">Wanahitaji mtaji mkubwa wa kuanza na eneo kubwa la malisho.</span></p>
+                <p><strong data-sw="Mazingira:" data-en="Housing:">Mazingira:</strong> <span data-sw="Banda kubwa lililoezekwa vizuri lenye sehemu safi ya kulia." data-en="Spacious, well-roofed shed with clean feeding stalls.">Banda kubwa lililoezekwa vizuri lenye sehemu safi ya kulia.</span></p>
+                <a href="ngombe.html" class="card-btn" data-sw="Soma Elimu ya Ng'ombe" data-en="Read Cattle Guide">Soma Elimu ya Ng'ombe</a>
+            </div>
+
+            <!-- 6. Kadi ya Kilimo -->
+            <div class="card">
+                <div class="card-icon">🌾</div>
+                <h3 data-sw="Kilimo cha Mazao" data-en="Crop Farming">Kilimo cha Mazao</h3>
+                <p><strong data-sw="Faida:" data-en="Benefits:">Faida:</strong> <span data-sw="Uhakika wa chakula na kipato kikubwa cha msimu." data-en="Food security and high seasonal income.">Uhakika wa chakula na kipato kikubwa cha msimu.</span></p>
+                <p><strong data-sw="Hasara:" data-en="Drawbacks:">Hasara:</strong> <span data-sw="Hutegemea sana mabadiliko ya hali ya hewa na wadudu." data-en="Highly dependent on weather changes and pests.">Hutegemea sana mabadiliko ya hali ya hewa na wadudu.</span></p>
+                <p><strong data-sw="Mazingira:" data-en="Housing:">Mazingira:</strong> <span data-sw="Udongo wenye rutuba, mifumo ya umwagiliaji, na jua." data-en="Fertile soil, irrigation systems, and adequate sunlight.">Udongo wenye rutuba, mifumo ya umwagiliaji, na jua.</span></p>
+                <a href="kilimo.html" class="card-btn" data-sw="Soma Elimu ya Kilimo" data-en="Read Crop Guide">Soma Elimu ya Kilimo</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 5. SEHEMU YA MAONI -->
+       <!-- 5. SEHEMU YA MAONI (FEEDBACK FORM - MULTI-LANGUAGE) -->
+    <section id="maoni" class="feedback-section">
+        <div class="section-title">
+            <h2 data-sw="Toa Maoni au Maswali Yako" data-en="Leave Your Feedback or Questions">Toa Maoni au Maswali Yako</h2>
+            <p data-sw="Tutumie ujumbe wako na timu ya Shamba Kidijitali itakujibu haraka." data-en="Send us your message and the Shamba Kidijitali team will reply swiftly.">Tutumie ujumbe wako na timu ya Shamba Kidijitali itakujibu haraka.</p>
+        </div>
+        <div class="form-container">
+            <form action="#" method="POST" class="feedback-form">
+                <div class="form-group">
+                    <label for="name" data-sw="Jina Lako:" data-en="Your Name:">Jina Lako:</label>
+                    <!-- JavaScript itabadilisha na 'placeholder' kwa kutumia njia hii -->
+                    <input type="text" id="name" name="name" placeholder="Andika jina lako kamili" data-sw-placeholder="Andika jina lako kamili" data-en-placeholder="Write your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-sw="Barua Pepe (Email):" data-en="Email Address:">Barua Pepe (Email):</label>
+                    <input type="email" id="email" name="email" placeholder="Mfano: jina@gmail.com" data-sw-placeholder="Mfano: jina@gmail.com" data-en-placeholder="Example: name@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-sw="Ujumbe/Maoni Yako:" data-en="Your Message/Feedback:">Ujumbe/Maoni Yako:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Andika maoni au ushauri wako hapa..." data-sw-placeholder="Andika maoni au ushauri wako hapa..." data-en-placeholder="Write your feedback or advice here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" data-sw="Tuma Ujumbe" data-en="Send Message">Tuma Ujumbe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer>
+        <p>&copy; 2026 Shamba Kidijitali. <span data-sw="Imetengenezwa na" data-en="Developed by">Imetengenezwa na</span> <span>mr web</span>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

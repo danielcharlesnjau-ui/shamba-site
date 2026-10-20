@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magonjwa na Tiba | Shamba Kidijitali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" class="active" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <li><a href="index.html#maoni" data-sw="Toa Maoni" data-en="Feedback">Toa Maoni</a></li>
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- KICHWA CHA UKURASA (HERO BANNER) -->
+    <section class="page-header-magonjwa">
+        <div class="header-overlay">
+            <h1 data-sw="Mwongozo wa Magonjwa, Tiba na Kinga" data-en="Diseases, Treatment & Prevention Guide">Mwongozo wa Magonjwa, Tiba na Kinga</h1>
+            <p data-sw="Maktaba kamili ya kudhibiti milipuko ya magonjwa ya mifugo na visumbufu vya mazao shambani." data-en="A complete library to control livestock outbreaks and crop pests on your farm.">Maktaba kamili ya kudhibiti milipuko ya magonjwa ya mifugo na visumbufu vya mazao shambani.</p>
+        </div>
+    </section>
+
+    <!-- ELIMU YA NDANI YA MAGONJWA -->
+    <section class="content-section">
+        <div class="content-container">
+            
+            <!-- SEHEMU YA 1: UTANGULIZI -->
+            <article class="main-article">
+                <h2 data-sw="1. Kinga Bora ni Biosecurity (Usafi)" data-en="1. Best Prevention is Biosecurity (Sanitation)">1. Kinga Bora ni Biosecurity (Usafi)</h2>
+                <p data-sw="Siri kubwa ya kuzuia magonjwa kwenye kilimo na mifugo ni Biosecurity. Hii inamaanisha kuweka mifumo inayozuia wadudu au virusi kuingia eneo lako la uzalishaji." 
+                   data-en="The ultimate secret to preventing diseases in farming and livestock is Biosecurity. This means implementing systems that block pests or viruses from entering your production area.">
+                    Siri kubwa ya kuzuia magonjwa kwenye kilimo na mifugo ni Biosecurity. Hii inamaanisha kuweka mifumo inayozuia wadudu au virusi kuingia eneo lako la uzalishaji.
+                </p>
+            </article>
+
+            <!-- SEHEMU YA 2: JEDWALI LA HARAKA LA MAGONJWA NA TIBA -->
+            <article class="main-article">
+                <h2 data-sw="2. Muhtasari wa Haraka wa Magonjwa" data-en="2. Quick Disease Summary Table">2. Muhtasari wa Haraka wa Magonjwa</h2>
+                
+                <div style="overflow-x: auto; margin-top: 20px;">
+                    <table class="disease-table">
+                        <thead>
+                            <tr>
+                                <th data-sw="Mnyama/Mmea" data-en="Animal/Crop">Mnyama/Mmea</th>
+                                <th data-sw="Ugonjwa Hatari" data-en="Dangerous Disease">Ugonjwa Hatari</th>
+                                <th data-sw="Dalili Kuu" data-en="Main Symptoms">Dalili Kuu</th>
+                                <th data-sw="Hatua za Kuchukua / Tiba" data-en="Actions / Treatment">Hatua za Kuchukua / Tiba</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong data-sw="Kuku 🐔" data-en="Chicken 🐔">Kuku 🐔</strong></td>
+                                <td data-sw="Kideri / Mdondo" data-en="Newcastle Disease">Kideri / Mdondo</td>
+                                <td data-sw="Kupinda shingo, kinyesi cha kijani" data-en="Twisted neck, green droppings">Kupinda shingo, kinyesi cha kijani</td>
+                                <td data-sw="Kinga ni Chanjo kila miezi 3." data-en="Prevention is Vaccine every 3 months.">Kinga ni Chanjo kila miezi 3.</td>
+                            </tr>
+                            <tr>
+                                <td><strong data-sw="Mbwa 🐕" data-en="Dog 🐕">Mbwa 🐕</strong></td>
+                                <td data-sw="Parvo (Parvovirus)" data-en="Parvo (Parvovirus)">Parvo (Parvovirus)</td>
+                                <td data-sw="Kutapika, kuharisha damu" data-en="Vomiting, bloody diarrhea">Kutapika, kuharisha damu</td>
+                                <td data-sw="Wahi kwa daktari. Chanjo ya 5-in-1." data-en="See a vet immediately. 5-in-1 vaccine.">Wahi kwa daktari. Chanjo ya 5-in-1.</td>
+                            </tr>
+                            <tr>
+                                <td><strong data-sw="Nyanya 🌾" data-en="Tomato 🌾">Nyanya 🌾</strong></td>
+                                <td data-sw="Chule / Blight" data-en="Early/Late Blight">Chule / Blight</td>
+                                <td data-sw="Madoa meusi kwenye majani" data-en="Black spots on leaves">Madoa meusi kwenye majani</td>
+                                <td data-sw="Kupulizia dawa za fangasi mapema." data-en="Spray fungicides early.">Kupulizia dawa za fangasi mapema.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <div class="back-home-container">
+                <a href="index.html" class="back-btn" data-sw="← Rudi Ukurasa wa Mwanzo" data-en="← Back to Home Page">← Rudi Ukurasa wa Mwanzo</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Shamba Kidijitali. <span data-sw="Imetengenezwa na" data-en="Developed by">Imetengenezwa na</span> <span>mr web</span>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

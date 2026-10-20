@@ -1,0 +1,666 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #08d89a; /* Lavender hafifu sana kwa mbali */
+    color: #333;
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #2079b4;
+    box-shadow: 0 4px 12px rgba(147, 112, 219, 0.1); /* Kivuli cha lavender */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: #4a2c72; /* Lavender iliyoiva */
+    font-size: 24px;
+}
+
+.logo h2 span {
+    color: #daa520; /* Rangi ya Dhahabu (Gold) */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #daa520; /* Inabadilika kuwa dhahabu ikiguswa */
+}
+
+/* ==========================================================================
+   3. HERO SLIDE SHOW SECTION
+   ========================================================================== */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Inachukua 70% ya urefu wa kioo */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Muonekano wa kufifia (Fade Effect) */
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Picha isipoteze umbo */
+    filter: brightness(60%); /* Kufanya picha iwe giza kidogo ili maandishi yasomeke */
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    color: #17e283;
+    z-index: 3;
+    max-width: 600px;
+}
+
+.slide-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(218, 42, 42, 0.5);
+}
+
+.slide-content p {
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(184, 31, 31, 0.5);
+}
+
+/* Vitufe vya mishale ya pembeni */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(74, 44, 114, 0.6); /* Background ya lavender yenye wepesi */
+    color: rgb(6, 99, 128);
+    border: 2px solid #daa520; /* Border ya dhahabu */
+    font-size: 24px;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #daa520;
+    color: #4a2c72;
+}
+
+.prev-btn { left: 2%; }
+.next-btn { right: 2%; }
+/* ==========================================================================
+   3b. MISSION SECTION (DHUMUNI LETU - RANGI TULIVU)
+   ========================================================================== */
+.mission-section {
+    padding: 50px 8%;
+    background-color: #f7f5fa; /* Rangi ya lavender tulivu sana */
+    text-align: center;
+    border-bottom: 1px solid #e1dde9;
+}
+
+.mission-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-container h2 {
+    color: #433854;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.mission-container p {
+    color: #5b5563;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.features-badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.features-badges span {
+    background-color: #eae7f0;
+    color: #5a4b70;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #dcd7e5;
+}
+
+/* ==========================================================================
+   4. CATEGORY GRID SECTION (RANGI TULIVU NA ZILIZOFUBA)
+   ========================================================================== */
+.category-section {
+    padding: 60px 8%;
+    background-color: #29f7db; /* Lavender ya kijivu iliyotulia sana na isiyong'aa */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    color: #433854; /* Zambarau iliyofuba na ya giza */
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #726b7c; /* Kijivu chenye asili ya lavender */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #957cc5; /* Off-white tulivu sana, haina weupe wa kuumiza macho */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(67, 56, 84, 0.05); /* Kivuli kidogo sana kilichotulia */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1dde9; /* Mpaka wa kijivu/lavender uliopooza */
+    border-bottom: 4px solid #5a4b70; /* Zambarau ya chini iliyopooza */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #9c80cc; /* Mabadiliko madogo sana ya rangi ikiguswa */
+    box-shadow: 0 8px 20px rgba(67, 56, 84, 0.1);
+    border-bottom: 4px solid #c99318; /* Dhahabu iliyofuba kidogo (Muted Gold) */
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #433854;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card p {
+    color: #5b5563; /* Maandishi ya kijivu yaliyotulia kabisa */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.card p strong {
+    color: #5a4b70;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #5a4b70; /* Vitufe vya rangi ya zambarau iliyotulia */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #c99318; /* Inabadilika kuwa dhahabu iliyopooza */
+    color: #fff;
+}
+
+/* ==========================================================================
+   5. SEHEMU YA FOMU YA MAONI (FEEDBACK SECTION)
+   ========================================================================== */
+.feedback-section {
+    padding: 60px 8%;
+    background-color: #2e98c2; /* Tani nyingine tulivu ya background */
+    border-top: 1px solid #dcd7e5;
+}
+
+.form-container {
+    max-width: 550px;
+    margin: 0 auto;
+    background: #359cd8;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #e1dde9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #433854;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfc9da;
+    background-color: #b7e3f5;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #5a4b70; /* Inabadilika kuwa lavender ikibonyezwa */
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5a4b70;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #fad379; /* Inabadilika kuwa dhahabu iliyopooza ikiguswa */
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+footer {
+    background-color: #572997; /* Rangi ya giza sana iliyotulia */
+    color: #b1a9bc;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    border-top: 1px solid #3c324b;
+}
+
+footer span {
+    color: #c99318;
+    font-weight: bold;
+}
+/* ==========================================================================
+   7. SEHEMU YA UKURASA WA NDANI (KILIMO.HTML STYLING)
+   ========================================================================== */
+.page-header-kilimo {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.7), rgba(43, 35, 54, 0.8)), url('kilimo-kwanza.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.header-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fcfbfe;
+}
+
+.header-overlay p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e1dde9;
+}
+
+.content-section {
+    padding: 50px 8%;
+    background-color: #f1eff6;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fcfbfe;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(67, 56, 84, 0.03);
+    border: 1px solid #e1dde9;
+}
+
+.main-article {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eae7f0;
+    padding-bottom: 30px;
+}
+
+.main-article:last-of-type {
+    border-bottom: none;
+}
+
+.main-article h2 {
+    color: #433854;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.main-article p {
+    color: #5b5563;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.info-alert {
+    background-color: #f4f1fa;
+    border-left: 4px solid #c99318;
+    padding: 15px;
+    border-radius: 4px;
+    color: #5b5563;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Gridi ya Faida na Hasara */
+.pro-con-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.pro-box, .con-box {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #faf9fc;
+    border: 1px solid #e1dde9;
+}
+
+.pro-box h3 { color: #2e7d32; font-size: 18px; margin-bottom: 12px; }
+.con-box h3 { color: #c62828; font-size: 18px; margin-bottom: 12px; }
+
+.pro-box ul, .con-box ul {
+    padding-left: 20px;
+    color: #5b5563;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pro-box li, .con-box li {
+    margin-bottom: 8px;
+}
+
+/* Magonjwa */
+.disease-list {
+    margin-top: 20px;
+}
+
+.disease-item {
+    background: #fbfaff;
+    border: 1px solid #eae7f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.disease-item h4 {
+    color: #5a4b70;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.disease-item p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Vifungo vya Kurudi Nyuma */
+.back-home-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #5a4b70;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #c99318;
+}
+
+.content-container ul {
+    padding-left: 20px;
+    color: #5b5563;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.content-container li {
+    margin-bottom: 10px;
+}
+/* ==========================================================================
+   8. SEHEMU YA UKURASA WA NDANI (MIFUGO.HTML STYLING)
+   ========================================================================== */
+.page-header-mifugo {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('kuku-bata.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+/* ==========================================================================
+   9. SEHEMU YA UKURASA WA KUKU (KUKU.HTML STYLING)
+   ========================================================================== */
+.page-header-kuku {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('kuku-bata.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+/* ==========================================================================
+   10. ADDITIONAL ANIMAL PAGES HERO BANNERS
+   ========================================================================== */
+.page-header-bata {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('kuku-bata.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.page-header-mbwa {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('mbwa-bora.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.page-header-ngombe {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('kilimo-kwanza.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+/* ==========================================================================
+   11. SEHEMU YA UKURASA WA MBUZI (MBUZI.HTML STYLING)
+   ========================================================================== */
+.page-header-mbuzi {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('kuku-bata.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+/* ==========================================================================
+   12. SEHEMU YA UKURASA WA MAGONJWA & TIBA (MAGONJWA.HTML STYLING)
+   ========================================================================== */
+.page-header-magonjwa {
+    background-image: linear-gradient(rgba(43, 35, 54, 0.75), rgba(43, 35, 54, 0.85)), url('mbwa-bora.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Mitindo ya Jedwali la Magonjwa */
+.disease-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: #fcfbfe;
+}
+
+.disease-table th, .disease-table td {
+    border: 1px solid #e1dde9;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.disease-table th {
+    background-color: #5a4b70;
+    color: white;
+    font-weight: 600;
+}
+
+.disease-table tr:nth-child(even) {
+    background-color: #f7f5fa; /* Rangi ya mistari ya katikati iliyotulia */
+}
+
+.disease-table tr:hover {
+    background-color: #f3eefc; /* Rangi ikiguswa na panya */
+}
+
+.disease-table td strong {
+    color: #433854;
+}
+/* ==========================================================================
+   13. LANGUAGE BUTTON STYLING
+   ========================================================================== */
+.lang-btn {
+    background-color: #5a4b70; /* Lavender tulivu */
+    color: white;
+    border: 1px solid #c99318; /* Muted gold border */
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: #c99318; /* Inakuwa dhahabu ikiguswa */
+    color: #2b2336;
+    border-color: #5a4b70;
+}
+
+
+ 
