@@ -5,57 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mwongozo wa Ufugaji wa Ng'ombe | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        
+        body {
+            background-color: #f4f4f9; 
+        }
+        .inner-page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ngombe.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .inner-header-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .main-article h2 {
+            color: #8e24aa;
+            margin-bottom: 12px;
+        }
+        .info-alert {
+            background-color: #f3e5f5;
+            border-left: 5px solid #8e24aa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- 1. NAVIGATION BAR (MENU) -->
     <header class="navbar">
-        <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
+        <div class="logo">
+            <h2>Shamba<span>Kidijitali</span></h2>
+        </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
-                <li><a href="index.html#maoni">Toa Maoni</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-header-ngombe">
-        <div class="header-overlay">
-            <h1>Ufugaji wa Ng'ombe wa Maziwa na Nyama</h1>
-            <p>Dhibiti lishe, boresha mabanda ya kisasa ya 'Zero Grazing', na ongeza lita za maziwa kila siku.</p>
+    <!-- 2. HERO BANNER -->
+    <section class="inner-page-hero">
+        <div class="inner-header-overlay">
+            <h1 data-sw="Ufugaji wa Ng'ombe wa Kisasa" data-en="Modern Cattle Farming">Ufugaji wa Ng'ombe wa Kisasa</h1>
+            <p data-sw="Jifunze mbinu bora za kupata maziwa mengi, ulishaji wa chakula cha virutubisho (Silage), na kuzuia magonjwa hatari ya kupe." 
+               data-en="Learn the best practices for high milk yields, nutritious silage feeding, and preventing dangerous tick-borne diseases.">
+               Jifunze mbinu bora za kupata maziwa mengi, ulishaji wa chakula cha virutubisho (Silage), na kuzuia magonjwa hatari ya kupe.
+            </p>
         </div>
     </section>
 
-    <section class="content-section">
+    <!-- 3. ELIMU YA NDANI YA NG'OMBE -->
+    <main class="content-section">
         <div class="content-container">
+            
+            <!-- SEHEMU YA 1: UTANGULIZI -->
             <article class="main-article">
-                <h2>1. Kilimo cha Ufugaji wa Ng'ombe (Zero Grazing) 🐄</h2>
-                <p>Ufugaji wa ng'ombe wa kisasa unahitaji mfumo wa kufungia ndani (Zero Grazing) ili kuzuia ng'ombe kutumia nishati nyingi kutembea na badala yake nishati hiyo itengeneze maziwa na nyama nyingi.</p>
+                <h2 data-sw="1. Fursa Zilizopo Kwenye Ufugaji wa Ng'ombe 🐄" data-en="1. Opportunities in Cattle Farming 🐄">1. Fursa Zilizopo Kwenye Ufugaji wa Ng'ombe 🐄</h2>
+                <p data-sw="Ufugaji wa ng'ombe (wa maziwa au nyama) ni moja ya miradi mikubwa na yenye faida ya muda mrefu nchini Tanzania. Ng'ombe mmoja wa kisasa wa maziwa (kama Friesian au Jersey) ana uwezo wa kutoa kuanzia lita 20 hadi 30 kwa siku, jambo linalomhakikishia mfugaji kipato thabiti cha kila siku kupitia mauzo ya maziwa viwandani au mitaani."
+                   data-en="Cattle farming (dairy or beef) is one of the largest projects with long-term profitability in Tanzania. A single modern dairy cow (like Friesian or Jersey) can produce 20 to 30 liters of milk per day, guaranteeing the farmer a stable daily income through factory or local sales.">
+                   Ufugaji wa ng'ombe (wa maziwa au nyama) ni moja ya miradi mikubwa na yenye faida ya muda mrefu nchini Tanzania. Ng'ombe mmoja wa kisasa wa maziwa (kama Friesian au Jersey) ana uwezo wa kutoa kuanzia lita 20 hadi 30 kwa siku, jambo linalomhakikishia mfugaji kipato thabiti cha kila siku kupitia mauzo ya maziwa viwandani au mitaani.
+                </p>
             </article>
-
+            <!-- SEHEMU YA 2: LISHE NA CHAKULA -->
             <article class="main-article">
-                <h2>2. Siri ya Kupata Maziwa Mengi</h2>
-                <p>Lishe ya ng'ombe wa maziwa inatakiwa igawanywe katika makundi matatu makuu kila siku:</p>
-                <ul>
-                    <li><strong>Chakula cha Nyuzi (Roughages):</strong> Majani makavu (Hay) au yaliyosindikwa (Silage) kama vile majani ya tembo (Napier grass).</li>
-                    <li><strong>Chakula cha Ziada (Concentrates):</strong> Pumba za mahindi, pumba ya mpunga, na mashudu kwa ajili ya nishati na protini.</li>
-                    <li><strong>Madini na Maji:</strong> Ng'ombe mmoja wa maziwa anahitaji wastani wa lita 60 hadi 80 za maji safi kila siku na vitalu vya chumvi ya mawe (maclik).</li>
-                </ul>
-            </article>
-
-            <article class="main-article">
-                <h2>3. Magonjwa Makubwa na Banda</h2>
+                <h2 data-sw="2. Lishe Bora na Ulishaji" data-en="2. Proper Nutrition and Feeding">2. Lishe Bora na Ulishaji</h2>
                 <div class="info-alert">
-                    <strong>Usafi wa Kwato na Kiwele:</strong> Sakafu ya simiti ya banda la ng'ombe lazima isafishwe asubuhi na jioni ili kuzuia ugonjwa wa *Mastitis* (Maziwa kuharibika kiweleni) na magonjwa ya kwato kuoza (Foot rot).
+                    <strong data-sw="Chakula cha Ng'ombe:" data-en="Cattle Diet:">Chakula cha Ng'ombe:</strong>
+                    <span data-sw="Ng'ombe wa maziwa wanahitaji majani mabichi (kama Napier grass), chakula cha kukatwa na kuchachushwa (Silage), na pumba za mahindi zilizochanganywa na virutubisho (Dairy Meal) ili kuongeza kiwango cha maziwa. Hakikisha ng'ombe anapata maji safi ya kutosha kila siku (wastani wa lita 60 hadi 90 kulingana na uzalishaji wake)." 
+                          data-en="Dairy cows require green forage (like Napier grass), fermented fodder (Silage), and maize bran mixed with supplements (Dairy Meal) to boost milk production. Ensure the cow gets plenty of clean water daily (averaging 60 to 90 liters depending on its production yield).">
+                        Ng'ombe wa maziwa wanahitaji majani mabichi (kama Napier grass), chakula cha kukatwa na kuchachushwa (Silage), na pumba za mahindi zilizochanganywa na virutubisho (Dairy Meal) ili kuongeza kiwango cha maziwa. Hakikisha ng'ombe anapata maji safi ya kutosha kila siku (wastani wa lita 60 hadi 90 kulingana na uzalishaji wake).
+                    </span>
                 </div>
             </article>
 
-            <div class="back-home-container"><a href="index.html" class="back-btn">← Rudi Mwanzo</a></div>
-        </div>
-    </section>
+            <!-- SEHEMU YA 3: MAGONJWA MAKUBWA -->
+            <article class="main-article">
+                <h2 data-sw="3. Magonjwa Makubwa ya Ng'ombe na Kinga" data-en="3. Major Cattle Diseases & Prevention">3. Magonjwa Makubwa ya Ng'ombe na Kinga</h2>
+                <div class="disease-list">
+                    <!-- Ugonjwa A: Ndigana Baridi -->
+                    <div class="disease-item" style="margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 15px;">
+                        <h4 data-sw="A. Ndigana Kali / Ndorobo (East Coast Fever - ECF)" data-en="A. East Coast Fever (ECF)" style="color: #333; margin-bottom: 5px;">A. Ndigana Kali / Ndorobo (East Coast Fever - ECF)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Kuvimba kwa tezi za masikioni na shingoni, homa kali, ng'ombe kutoa denda na machozi, na kushindwa kupumua vizuri kuelekea kifo." data-en="Swelling of lymph nodes under the ears and shoulder, high fever, excessive salivation and tearing, and difficulty breathing near death.">Kuvimba kwa tezi za masikioni na shingoni, homa kali, ng'ombe kutoa denda na machozi, na kushindwa kupumua vizuri kuelekea kifo.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Ugonjwa huu unaenezwa na kupe. Kinga kubwa ni kuoga au kupiga ng'ombe dawa ya kupe (Acaricide) kila wiki na kutoa chanjo ya ECF mapema." data-en="This disease is transmitted by ticks. The primary prevention is dipping or spraying the cattle with tick medicine (Acaricide) weekly and administering the ECF vaccine early.">Ugonjwa huu unaenezwa na kupe. Kinga kubwa ni kuoga au kupiga ng'ombe dawa ya kupe (Acaricide) kila wiki na kutoa chanjo ya ECF mapema.</span></p>
+                    </div>
+                    <!-- Ugonjwa B: Ugonjwa wa Matiti -->
+                    <div class="disease-item" style="margin-bottom: 20px; padding-bottom: 15px;">
+                        <h4 data-sw="B. Ugonjwa wa Matiti (Mastitis)" data-en="B. Mastitis" style="color: #333; margin-bottom: 5px;">B. Ugonjwa wa Matiti (Mastitis)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Chuchu kuvimba, kuwa ngumu na za moto, maziwa kutoka yakiwa na mabonge-mabonge, usaha, au damu, na ng'ombe kukataa kukamuliwa kwa sababu ya maumivu." data-en="Swollen, hard, and hot udders, milk coming out clotted, with pus or blood, and the cow refusing to be milked due to severe pain.">Chuchu kuvimba, kuwa ngumu na za moto, maziwa kutoka yakiwa na mabonge-mabonge, usaha, au damu, na ng'ombe kukataa kukamuliwa kwa sababu ya maumivu.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Udhibiti:" data-en="Control:">Udhibiti:</strong> <span data-sw="Kuhakikisha usafi mkubwa wa mikono ya mkamuaji na banda la ng'ombe. Kukamua maziwa yote yaishe matitini na kutumia dawa maalum ya kuzamisha chuchu (Teat Dip) baada ya kukamua." data-en="Ensuring strict hygiene of the milker's hands and the cattle shed. Milking completely to empty the udder and using a teat dip solution immediately after milking.">Kuhakikisha usafi mkubwa wa mikono ya mkamuaji na banda la ng'ombe. Kukamua maziwa yote yaishe matitini na kutumia dawa maalum ya kuzamisha chuchu (Teat Dip) baada ya kukamua.</span></p>
+                    </div>
+                </div>
+            </article>
 
-    <footer><p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p></footer>
+            <!-- KITUFE CHA KURUDI NYUMA -->
+            <div class="back-home-container" style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="back-btn" data-sw="← Rudi Mwanzo" data-en="← Back Home" style="display: inline-block; background-color: #8e24aa; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; transition: background 0.3s;">← Rudi Mwanzo</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p>
+    </footer>
+
+    <!-- JAVASCRIPT YA KUBADILISHA LUGHA YA UKURASA MZIMA (SINGLE TOGGLE) -->
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; 
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; 
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

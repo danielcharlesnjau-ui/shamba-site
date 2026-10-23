@@ -3,59 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ufugaji na Matunzo ya Mbwa | Shamba Kidijitali</title>
+    <title>Usimamizi wa Afya ya Mbwa | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        
+        body {
+            background-color: #f4f4f9; 
+        }
+        .inner-page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('mbwa.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .inner-header-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .main-article h2 {
+            color: #8e24aa;
+            margin-bottom: 12px;
+        }
+        .info-alert {
+            background-color: #f3e5f5;
+            border-left: 5px solid #8e24aa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- 1. NAVIGATION BAR (MENU) -->
     <header class="navbar">
-        <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
+        <div class="logo">
+            <h2>Shamba<span>Kidijitali</span></h2>
+        </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
-                <li><a href="index.html#maoni">Toa Maoni</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-header-mbwa">
-        <div class="header-overlay">
-            <h1>Usimamizi na Afya ya Mbwa</h1>
-            <p>Jifunze mifumo bora ya ulinzi, biashara ya watoto wa mbwa, na ratiba muhimu za chanjo.</p>
+    <!-- 2. HERO BANNER -->
+    <section class="inner-page-hero">
+        <div class="inner-header-overlay">
+            <h1 data-sw="Usimamizi wa Afya ya Mbwa" data-en="Dog Health & Care Management">Usimamizi wa Afya ya Mbwa</h1>
+            <p data-sw="Mwongozo kamili wa chanjo, chakula bora, na matunzo sahihi ya mbwa wako wa ulinzi au biashara." 
+               data-en="A complete guide on vaccinations, quality diet, and proper care for your guard or commercial dogs.">
+               Mwongozo kamili wa chanjo, chakula bora, na matunzo sahihi ya mbwa wako wa ulinzi au biashara.
+            </p>
         </div>
     </section>
 
-    <section class="content-section">
+    <!-- 3. ELIMU YA NDANI YA MBWA -->
+    <main class="content-section">
         <div class="content-container">
+            
+            <!-- SEHEMU YA 1: UTANGULIZI -->
             <article class="main-article">
-                <h2>1. Msingi wa Ufugaji wa Mbwa 🐕</h2>
-                <p>Ufugaji wa mbwa unaleta tija kubwa kama ukifanyika kwa malengo ya ulinzi imara wa mashamba/maboma au kwa ajili ya biashara ya kuzalisha breeds za kisasa (kama German Shepherd, Rottweiler, au Caucasian Shepherd).</p>
+                <h2 data-sw="1. Fursa Zilizopo Kwenye Ufugaji wa Mbwa" data-en="1. Opportunities in Dog Breeding">1. Fursa Zilizopo Kwenye Ufugaji wa Mbwa</h2>
+                <p data-sw="Ufugaji wa mbwa nchini Tanzania una tija kubwa katika sekta mbili: ulinzi thabiti wa mashamba na majumbani, pamoja na biashara ya kuuza watoto wa mbwa wa kisasa (kama German Shepherd, Rottweiler, na Pitbull). Mbwa anahitaji uangalizi wa karibu sana wa afya yake ili aweze kutekeleza majukumu yake kwa ufasaha."
+                   data-en="Dog breeding in Tanzania is highly profitable in two areas: solid security for farms and homes, and the business of selling modern puppies (like German Shepherd, Rottweiler, and Pitbull). A dog requires close health monitoring to perform its duties effectively.">
+                   Ufugaji wa mbwa nchini Tanzania una tija kubwa katika sekta mbili: ulinzi thabiti wa mashamba na majumbani, pamoja na biashara ya kuuza watoto wa mbwa wa kisasa (kama German Shepherd, Rottweiler, na Pitbull). Mbwa anahitaji uangalizi wa karibu sana wa afya yake ili aweze kutekeleza majukumu yake kwa ufasaha.
+                </p>
             </article>
-
+            <!-- SEHEMU YA 2: LISHE NA CHAKULA -->
             <article class="main-article">
-                <h2>2. Magonjwa Hatari na Tiba</h2>
-                <p>Mbwa anakabiliwa na magonjwa hatari ya virusi ambayo hayana tiba lakini yanakingwa kwa chanjo:</p>
-                <ul>
-                    <li><strong>Parvo (Parvovirus):</strong> Kushambulia zaidi watoto wa mbwa. Dalili ni kutapika, kuharisha damu yenye harufu mbaya sana, na kukataa kula. **Kinga:** Vaccine ya *5-in-1* ikiwa na umri wa wiki 6, 9, na 12.</li>
-                    <li><strong>Kichaa cha Mbwa (Rabies):</strong> Huambukiza hata binadamu kupitia mate au kung'atwa. **Kinga:** Chanjo ya kila mwaka ni lazima.</li>
-                </ul>
-            </article>
-
-            <article class="main-article">
-                <h2>3. Lishe na Makazi</h2>
+                <h2 data-sw="2. Lishe Bora na Chakula" data-en="2. Proper Nutrition and Feeding">2. Lishe Bora na Chakula</h2>
                 <div class="info-alert">
-                    <strong>Siri ya Lishe:</strong> Kamwe usiwape mbwa mifupa midogo na yenye ncha kali ya kuku kwani inaweza kupasua au kutoboa utumbo wao na kusababisha kifo cha ndani kwa ndani.
+                    <strong data-sw="Mfumo wa Chakula:" data-en="Feeding System:">Mfumo wa Chakula:</strong>
+                    <span data-sw="Mbwa wanahitaji mlo kamili wenye protini nyingi (nyama, samaki/dagaa) na wanga (ugali au wali) kwa ajili ya nguvu. Kwa watoto wa mbwa, ni muhimu kuwapa maziwa na chakula laini hadi wafikishe wiki 6. Hakikisha wana maji safi ya kunywa kila wakati ili wasipate upungufu wa maji mwilini." 
+                          data-en="Dogs require a balanced diet high in protein (meat, fish) and carbohydrates (ugali or rice) for energy. For puppies, it is essential to provide milk and soft food until 6 weeks of age. Ensure they have clean drinking water available at all times to prevent dehydration.">
+                        Mbwa wanahitaji mlo kamili wenye protini nyingi (nyama, samaki/dagaa) na wanga (ugali au wali) kwa ajili ya nguvu. Kwa watoto wa mbwa, ni muhimu kuwapa maziwa na chakula laini hadi wafikishe wiki 6. Hakikisha wana maji safi ya kunywa kila wakati ili wasipate upungufu wa maji mwilini.
+                    </span>
                 </div>
-                <p>Banda liwe safi, kavu, na lenye nafasi ya mbwa kufanya mazoezi ili wasiwe na fujo au msongo wa mawazo (stress).</p>
             </article>
 
-            <div class="back-home-container"><a href="index.html" class="back-btn">← Rudi Mwanzo</a></div>
-        </div>
-    </section>
+            <!-- SEHEMU YA 3: MAGONJWA -->
+            <article class="main-article">
+                <h2 data-sw="3. Magonjwa Hatari ya Mbwa na Kinga" data-en="3. Dangerous Dog Diseases & Prevention">3. Magonjwa Hatari ya Kuku na Tiba</h2>
+                <div class="disease-list">
+                    <!-- Ugonjwa A: Parvo -->
+                    <div class="disease-item" style="margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 15px;">
+                        <h4 data-sw="A. Parvo (Canine Parvovirus)" data-en="A. Canine Parvovirus (Parvo)" style="color: #333; margin-bottom: 5px;">A. Parvo (Canine Parvovirus)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Mbuzi au mbwa kutapika ghafula, kuharisha damu yenye harufu mbaya sana, kukataa kula, na kuishiwa nguvu haraka sana. Huua watoto wa mbwa kwa asilimia kubwa." data-en="Sudden vomiting, severe foul-smelling bloody diarrhea, refusal to eat, and rapid loss of strength. It has a very high mortality rate in puppies.">Mbuzi au mbwa kutapika ghafula, kuharisha damu yenye harufu mbaya sana, kukataa kula, na kuishiwa nguvu haraka sana. Huua watoto wa mbwa kwa asilimia kubwa.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Ugonjwa huu hauna tiba ya moja kwa moja ya virusi. Kinga pekee ni kumpa mbwa chanjo ya kwanza (Parvo Vaccine) akiwa na umri wa wiki 6 hadi 8 na kurudia." data-en="There is no direct cure for this virus. The only prevention is administering the Parvo vaccine at 6 to 8 weeks of age, followed by booster shots.">Ugonjwa huu hauna tiba ya moja kwa moja ya virusi. Kinga pekee ni kumpa mbwa chanjo ya kwanza (Parvo Vaccine) akiwa na umri wa wiki 6 hadi 8 na kurudia.</span></p>
+                    </div>
+                    <!-- Ugonjwa B: Kichaa cha Mbwa -->
+                    <div class="disease-item" style="margin-bottom: 20px; padding-bottom: 15px;">
+                        <h4 data-sw="B. Kichaa cha Mbwa (Rabies)" data-en="B. Rabies" style="color: #333; margin-bottom: 5px;">B. Kichaa cha Mbwa (Rabies)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Mbwa kubadilika tabia, kuwa mkali kupita kiasi au muoga sana, kutoa udenda mwingi, kuogopa maji, na kudona au kung'ata kila kitu ghafula." data-en="Changes in behavior, extreme aggressiveness or excessive shyness, heavy salivation, fear of water, and snapping or biting at objects suddenly.">Mbwa kubadilika tabia, kuwa mkali kupita kiasi au muoga sana, kutoa udenda mwingi, kuogopa maji, na kudona au kung'ata kila kitu ghafula.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Ugonjwa huu unaambukiza binadamu na hauna tiba mbwa akishaonyesha dalili. Ni lazima kumpa mbwa chanjo ya Kichaa cha Mbwa (Rabies Vaccine) kila mwaka." data-en="This disease is transmissible to humans and has no cure once symptoms appear. It is mandatory to vaccinate your dog against Rabies every single year.">Ugonjwa huu unaambukiza binadamu na hauna tiba mbwa akishaonyesha dalili. Ni lazima kumpa mbwa chanjo ya Kichaa cha Mbwa (Rabies Vaccine) kila mwaka.</span></p>
+                    </div>
+                </div>
+            </article>
 
-    <footer><p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p></footer>
+            <!-- KITUFE CHA KURUDI NYUMA -->
+            <div class="back-home-container" style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="back-btn" data-sw="← Rudi Mwanzo" data-en="← Back Home" style="display: inline-block; background-color: #8e24aa; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; transition: background 0.3s;">← Rudi Mwanzo</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p>
+    </footer>
+
+    <!-- JAVASCRIPT YA KUBADILISHA LUGHA YA UKURASA MZIMA (SINGLE TOGGLE) -->
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; 
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; 
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

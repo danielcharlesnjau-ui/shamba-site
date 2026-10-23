@@ -5,89 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mwongozo wa Ufugaji wa Mbuzi | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        
+        body {
+            background-color: #f4f4f9; 
+        }
+        .inner-page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('mbuzi.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .inner-header-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .main-article h2 {
+            color: #8e24aa;
+            margin-bottom: 12px;
+        }
+        .info-alert {
+            background-color: #f3e5f5;
+            border-left: 5px solid #8e24aa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- 1. NAVIGATION BAR (MENU) -->
     <header class="navbar">
-        <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
+        <div class="logo">
+            <h2>Shamba<span>Kidijitali</span></h2>
+        </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
-                <li><a href="index.html#maoni">Toa Maoni</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
-    <!-- KICHWA CHA UKURASA (HERO BANNER) -->
-    <section class="page-header-mbuzi">
-        <div class="header-overlay">
-            <h1>Ufugaji wa Mbuzi wa Kisasa</h1>
-            <p>Jifunze siri za kuzalisha mapacha, kupata maziwa yenye lishe bora, na ujenzi wa mabanda bora ya ghorofa.</p>
+    <!-- 2. HERO BANNER -->
+    <section class="inner-page-hero">
+        <div class="inner-header-overlay">
+            <h1 data-sw="Ufugaji wa Mbuzi wa Kisasa" data-en="Modern Goat Farming">Ufugaji wa Mbuzi wa Kisasa</h1>
+            <p data-sw="Jifunze siri za kuzalisha mapacha, kupata maziwa yenye lishe bora, na ujenzi wa mabanda bora ya ghorofa." 
+               data-en="Learn the secrets to producing twins, getting highly nutritious milk, and constructing high-quality elevated structures.">
+               Jifunze siri za kuzalisha mapacha, kupata maziwa yenye lishe bora, na ujenzi wa mabanda bora ya ghorofa.
+            </p>
         </div>
     </section>
 
-    <!-- ELIMU YA NDANI YA MBUZI -->
-    <section class="content-section">
+    <!-- 3. ELIMU YA NDANI YA MBUZI -->
+    <main class="content-section">
         <div class="content-container">
             
             <!-- SEHEMU YA 1: UTANGULIZI -->
             <article class="main-article">
-                <h2>1. Fursa Zilizopo Kwenye Ufugaji wa Mbuzi 🐐</h2>
-                <p>
-                    Ufugaji wa mbuzi ni mradi wa haraka na wenye faida kubwa kwa sababu mbuzi wanazaa haraka (wastani wa mara mbili kwa mwaka na mara nyingi huzaa mapacha). Unaweza kufuga mbuzi wa nyama (kama Boer) au mbuzi wa maziwa (kama Saanen na Toggenburg) ambao maziwa yao yana lishe ya juu sana na yanatafutwa kwa ajili ya watoto na wagonjwa.
+                <h2 data-sw="1. Fursa Zilizopo Kwenye Ufugaji wa Mbuzi 🐐" data-en="1. Opportunities in Goat Farming 🐐">1. Fursa Zilizopo Kwenye Ufugaji wa Mbuzi 🐐</h2>
+                <p data-sw="Ufugaji wa mbuzi ni mradi wa haraka na wenye faida kubwa kwa sababu mbuzi wanazaa haraka (wastani wa mara mbili kwa mwaka na mara nyingi huzaa mapacha). Unaweza kufuga mbuzi wa nyama (kama Boer) au mbuzi wa maziwa (kama Saanen na Toggenburg) ambao maziwa yao yana lishe ya juu sana na yanatafutwa kwa ajili ya watoto na wagonjwa."
+                   data-en="Goat farming is a fast and highly profitable project because goats reproduce quickly (averaging twice a year and often giving birth to twins). You can breed beef goats (like Boer) or dairy goats (like Saanen and Toggenburg) whose milk has very high nutrition and is highly sought after for children and patients.">
+                   Ufugaji wa mbuzi ni mradi wa haraka na wenye faida kubwa kwa sababu mbuzi wanazaa haraka (wastani wa mara mbili kwa mwaka na mara nyingi huzaa mapacha). Unaweza kufuga mbuzi wa nyama (kama Boer) au mbuzi wa maziwa (kama Saanen na Toggenburg) ambao maziwa yao yana lishe ya juu sana na yanatafutwa kwa ajili ya watoto na wagonjwa.
                 </p>
             </article>
 
             <!-- SEHEMU YA 2: FAIDA NA HASARA -->
             <article class="main-article">
-                <h2>2. Uchambuzi wa Faida na Hasara za Mbuzi</h2>
+                <h2 data-sw="2. Uchambuzi wa Faida na Hasara za Mbuzi" data-en="2. Advantages and Disadvantages Analysis">2. Uchambuzi wa Faida na Hasara za Mbuzi</h2>
                 <ul>
-                    <li><strong>Faida Kuu:</strong> Wanastahimili ukame, hawahitaji eneo kubwa sana kama ng'ombe, na wanazaa kwa wingi ndani ya muda mfupi.</li>
-                    <li><strong>Hasara na Changamoto:</strong> Wana tabia ya uharibifu mkubwa wa miti, mazao, na mazingira wasipofungiwa. Pia wanakabiliwa na magonjwa ya ghafula ya mapafu na minyoo wasipotunzwa vizuri.</li>
+                    <li style="margin-bottom: 8px;"><strong data-sw="Faida Kuu:" data-en="Main Advantages:">Faida Kuu:</strong> <span data-sw="Wanastahimili ukame, hawahitaji eneo kubwa sana kama ng'ombe, na wanazaa kwa wingi ndani ya muda mfupi." data-en="They are drought-tolerant, do not require a massive area like cattle, and reproduce abundantly within a short period.">Wanastahimili ukame, hawahitaji eneo kubwa sana kama ng'ombe, na wanazaa kwa wingi ndani ya muda mfupi.</span></li>
+                    <li style="margin-bottom: 8px;"><strong data-sw="Hasara na Changamoto:" data-en="Drawbacks and Challenges:">Hasara na Changamoto:</strong> <span data-sw="Wana tabia ya uharibifu mkubwa wa miti, mazao, na mazingira wasipofungiwa. Pia wanakabiliwa na magonjwa ya ghafula ya mapafu na minyoo wasipotunzwa vizuri." data-en="They have a destructive tendency toward trees, crops, and the environment if not confined. They also face sudden lung diseases and worm infestations if not well maintained.">Wana tabia ya uharibifu mkubwa wa miti, mazao, na mazingira wasipofungiwa. Pia wanakabiliwa na magonjwa ya ghafula ya mapafu na minyoo wasipotunzwa vizuri.</span></li>
                 </ul>
             </article>
-
             <!-- SEHEMU YA 3: MUUNDO WA BANDA LA KISASA -->
             <article class="main-article">
-                <h2>3. Muundo wa Banda Bora la Ghorofa (Slatted Floor)</h2>
+                <h2 data-sw="3. Muundo wa Banda Bora la Ghorofa (Slatted Floor)" data-en="3. Modern Elevated Structure Design (Slatted Floor)">3. Muundo wa Banda Bora la Ghorofa (Slatted Floor)</h2>
                 <div class="info-alert">
-                    <strong>Mfumo wa Sakafu:</strong> Banda la mbuzi linatakiwa liwe na sakafu ya mbao zilizofungwa kwa kuacha nafasi ndogo (sentimita 1.5 hadi 2) ili mkojo na kinyesi vianguke chini kwa urahisi. Hii inazuia unyevu na harufu ya amonia inayoletea mbuzi ugonjwa hatari wa mafua na kikohozi (PPR).
+                    <strong data-sw="Mfumo wa Sakafu:" data-en="Floor System:">Mfumo wa Sakafu:</strong> 
+                    <span data-sw="Banda la mbuzi linatakiwa liwe na sakafu ya mbao zilizofungwa kwa kuacha nafasi ndogo (sentimita 1.5 hadi 2) ili mkojo na kinyesi vianguke chini kwa urahisi. Hii inazuia unyevu na harufu ya amonia inayoletea mbuzi ugonjwa hatari wa mafua na kikohozi (PPR)." 
+                          data-en="The goat house should have a wooden slatted floor spaced tightly (1.5 to 2 cm) so that urine and droppings fall through easily. This prevents moisture and ammonia odor which cause dangerous flu and cough diseases (PPR) in goats.">
+                        Banda la mbuzi linatakiwa liwe na sakafu ya mbao zilizofungwa kwa kuacha nafasi ndogo (sentimita 1.5 hadi 2) ili mkojo na kinyesi vianguke chini kwa urahisi. Hii inazuia unyevu na harufu ya amonia inayoletea mbuzi ugonjwa hatari wa mafua na kikohozi (PPR).
+                    </span>
                 </div>
-                <p>Banda linyanyuliwe futi 2 hadi 3 kutoka ardhini na liwe na uingizaji mzuri wa hewa safi na mwanga wa kutosha wa jua.</p>
+                <p data-sw="Banda linyanyuliwe futi 2 hadi 3 kutoka ardhini na liwe na uingizaji mzuri wa hewa safi na mwanga wa kutosha wa jua." 
+                   data-en="The structure should be raised 2 to 3 feet from the ground and have good ventilation for fresh air and adequate sunlight.">
+                    Banda linyanyuliwe futi 2 hadi 3 kutoka ardhini na liwe na uingizaji mzuri wa hewa safi na mwanga wa kutosha wa jua.
+                </p>
             </article>
 
             <!-- SEHEMU YA 4: MAGONJWA MAKUBWA -->
             <article class="main-article">
-                <h2>4. Magonjwa Makubwa ya Mbuzi na Kinga Zake 🦠</h2>
+                <h2 data-sw="4. Magonjwa Makubwa ya Mbuzi na Kinga Zake 🦠" data-en="4. Major Goat Diseases & Prevention 🦠">4. Magonjwa Makubwa ya Mbuzi na Kinga Zake 🦠</h2>
                 <div class="disease-list">
-                    <div class="disease-item">
-                        <h4>A. Homa ya Mapafu ya Mbuzi (PPR / CCPP)</h4>
-                        <p><strong>Dalili:</strong> Mbuzi kukohoa sana, kutoa mafua mazito puani, machozi, kuharisha, na vidonda mdomoni vinavyofanya washindwe kula.</p>
-                        <p><strong>Kinga:</strong> Hakuna tiba ya uhakika ugonjwa ukishakolea. Kinga kubwa ni kuwapa **chanjo ya PPR** kila mwaka na kutenga wagonjwa haraka.</p>
+                    <!-- Ugonjwa A: PPR -->
+                    <div class="disease-item" style="margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 15px;">
+                        <h4 data-sw="A. Homa ya Mapafu ya Mbuzi (PPR / CCPP)" data-en="A. Contagious Caprine Pleuropneumonia (PPR / CCPP)" style="color: #333; margin-bottom: 5px;">A. Homa ya Mapafu ya Mbuzi (PPR / CCPP)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Mbuzi kukohoa sana, kutoa mafua mazito puani, machozi, kuharisha, na vidonda mdomoni vinavyofanya washindwe kula." data-en="Severe coughing, thick nasal discharge, tearing eyes, diarrhea, and mouth sores making them unable to feed.">Mbuzi kukohoa sana, kutoa mafua mazito puani, machozi, kuharisha, na vidonda mdomoni vinavyofanya washindwe kula.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Hakuna tiba ya uhakika ugonjwa ukishakolea. Kinga kubwa ni kuwapa chanjo ya PPR kila mwaka na kutenga wagonjwa haraka." data-en="There is no definitive cure once advanced. The primary prevention is an annual PPR vaccination and isolating sick animals immediately.">Hakikisha kutoa chanjo ya PPR kila mwaka na kutenga wagonjwa haraka kwani hakuna tiba ya uhakika ugonjwa ukishakolea.</span></p>
                     </div>
-                    <div class="disease-item">
-                        <h4>B. Ugonjwa wa Minyoo (Worm Infestation)</h4>
-                        <p><strong>Dalili:</strong> Mbuzi kukonda, manyoya kusimama na kukatika, tumbo kuvimba, na wakati mwingine kuvimba chini ya taya (bottle jaw).</p>
-                        <p><strong>Udhibiti:</strong> Kuwapa dawa za minyoo (Deworming) kila baada ya miezi mitatu, na kuepuka kuwapeleka malishoni asubuhi kukiwa na umande mwingi.</p>
+                    <!-- Ugonjwa B: Minyoo -->
+                    <div class="disease-item" style="margin-bottom: 20px; padding-bottom: 15px;">
+                        <h4 data-sw="B. Ugonjwa wa Minyoo (Worm Infestation)" data-en="B. Worm Infestation (Helminthiasis)" style="color: #333; margin-bottom: 5px;">B. Ugonjwa wa Minyoo (Worm Infestation)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Mbuzi kukonda, manyoya kusimama na kukatika, tumbo kuvimba, na wakati mwingine kuvimba chini ya taya (bottle jaw)." data-en="Emaciation, rough coat hair breaking easily, bloated stomach, and sometimes swelling under the jaw (bottle jaw).">Mbuzi kukonda, manyoya kusimama na kukatika, tumbo kuvimba, na wakati mwingine kuvimba chini ya taya (bottle jaw).</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Udhibiti:" data-en="Control:">Udhibiti:</strong> <span data-sw="Kuwapa dawa za minyoo (Deworming) kila baada ya miezi mitatu, na kuepuka kuwapeleka malishoni asubuhi kukiwa na umande mwingi." data-en="Administering deworming medication every three months and avoiding taking them to grazing areas early in the morning when dew is heavy.">Kuwapa dawa za minyoo (Deworming) kila baada ya miezi mitatu, na kuepuka kuwapeleka malishoni asubuhi kukiwa na umande mwingi.</span></p>
                     </div>
                 </div>
             </article>
 
-            <div class="back-home-container">
-                <a href="index.html" class="back-btn">← Rudi Mwanzo</a>
+            <!-- KITUFE CHA KURUDI NYUMA -->
+            <div class="back-home-container" style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="back-btn" data-sw="← Rudi Mwanzo" data-en="← Back Home" style="display: inline-block; background-color: #8e24aa; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; transition: background 0.3s;">← Rudi Mwanzo</a>
             </div>
 
         </div>
-    </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
         <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p>
     </footer>
 
+    <!-- JAVASCRIPT YA KUBADILISHA LUGHA YA UKURASA MZIMA (SINGLE TOGGLE) -->
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; 
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; 
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

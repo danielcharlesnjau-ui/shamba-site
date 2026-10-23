@@ -5,56 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mwongozo wa Ufugaji wa Bata | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa; /* Rangi ya Zambarau */
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        
+        body {
+            background-color: #f4f4f9; 
+        }
+        .inner-page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('kuku na bata.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .inner-header-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .main-article h2 {
+            color: #8e24aa;
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- 1. NAVIGATION BAR (MENU) - KITUFE KIPO HUKU JUU KULIA -->
     <header class="navbar">
-        <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
+        <div class="logo">
+            <h2>Shamba<span>Kidijitali</span></h2>
+        </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
-                <li><a href="index.html#maoni">Toa Maoni</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU KILICHOPO JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-header-bata">
-        <div class="header-overlay">
-            <h1>Ufugaji wa Bata Wenye Tija</h1>
-            <p>Mwongozo sahihi wa ufugaji wa ndege wastahimilivu na wenye soko zuri la nyama na mayai makubwa.</p>
+    <!-- 2. HERO BANNER -->
+    <section class="inner-page-hero">
+        <div class="inner-header-overlay">
+            <h1 data-sw="Ufugaji wa Bata wa Kisasa" data-en="Modern Duck Farming">Ufugaji wa Bata wa Kisasa</h1>
+            <p data-sw="Jifunze mbinu bora za ufugaji wa bata, soko lao, na namna ya kuwalinda dhidi ya magonjwa." 
+               data-en="Learn the best practices in duck farming, their market potential, and how to protect them from diseases.">
+               Jifunze mbinu bora za ufugaji wa bata, soko lao, na namna ya kuwalinda dhidi ya magonjwa.
+            </p>
         </div>
     </section>
 
-    <section class="content-section">
+    <!-- 3. ELIMU YA NDANI YA BATA -->
+    <main class="content-section">
         <div class="content-container">
-            <article class="main-article">
-                <h2>1. Utangulizi wa Ufugaji wa Bata 🦆</h2>
-                <p>Bata ni ndege wanaofaa sana kwa wafugaji wanaotafuta mradi usio na usumbufu mkubwa wa magonjwa. Wana uwezo mkubwa wa kuhimili hali ya hewa ngumu na wanatafuta chakula wenyewe kwa urahisi wakipata eneo la wazi.</p>
+            
+            <!-- SEHEMU YA 1: UTANGULIZI -->
+            <article class="main-article" style="margin-bottom: 25px;">
+                <h2 data-sw="1. Fursa Zilizopo Kwenye Ufugaji wa Bata 🦆" data-en="1. Opportunities in Duck Farming 🦆">1. Fursa Zilizopo Kwenye Ufugaji wa Bata 🦆</h2>
+                <p data-sw="Bata ni ndege wavumilivu sana ambao wana uwezo mkubwa wa kuhimili magonjwa mengi tofauti na kuku. Ufugaji wao unazidi kushika kasi nchini Tanzania kwa sababu ya soko zuri la nyama na mayai yenye virutubisho vingi."
+                   data-en="Ducks are highly resilient birds with a strong ability to resist many diseases compared to chickens. Their farming is rapidly gaining momentum in Tanzania due to a good market for meat and highly nutritious eggs.">
+                   Bata ni ndege wavumilivu sana ambao wana uwezo mkubwa wa kuhimili magonjwa mengi tofauti na kuku. Ufugaji wao unazidi kushika kasi nchini Tanzania kwa sababu ya soko zuri la nyama na mayai yenye virutubisho vingi.
+                </p>
             </article>
-
-            <article class="main-article">
-                <h2>2. Faida na Hasara za Bata</h2>
-                <ul>
-                    <li><strong>Faida:</strong> Ustahimilivu mkubwa wa magonjwa ya ndege (hawatishiwi sana na kideri), mayai yao ni makubwa na yana soko zuri kwa watengeneza keki, na nyama yao ina uzito mkubwa.</li>
-                    <li><strong>Hasara:</strong> Wana tabia ya kula chakula kingi sana na wanasababisha uchafu na unyevu bandani kutokana na kupenda maji.</li>
-                </ul>
-            </article>
-
-            <article class="main-article">
-                <h2>3. Mazingira ya Banda na Maji</h2>
-                <div class="info-alert">
-                    <strong>Angalizo la Maji:</strong> Ingawa bata wanaweza kuishi bila bwawa, wanahitaji maji ya kutosha kwenye vyombo virefu ili waweze kuzamisha vichwa vyao kusafisha macho na midomo (nostrils) kuzuia upofu na mafua.
+            <!-- SEHEMU YA 2: LISHE NA CHAKULA -->
+            <article class="main-article" style="margin-bottom: 25px;">
+                <h2 data-sw="2. Lishe na Chakula cha Bata" data-en="2. Duck Nutrition and Feeding">2. Lishe na Chakula cha Bata</h2>
+                <div class="info-alert" style="background-color: #f3e5f5; border-left: 5px solid #8e24aa; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+                    <strong data-sw="Ulaji wa Bata:" data-en="Duck Feeding Habits:">Ulaji wa Bata:</strong> 
+                    <span data-sw="Bata wanakula chakula kingi zaidi kuliko kuku na wanapenda pumba za mpunga, mahindi, mboga za majani, na wadudu wadogo wadogo. Ni muhimu kuwapa maji mengi na safi kila siku karibu na vyombo vyao vya chakula kwa sababu wanatumia maji kusafishia midomo yao wanapokula ili wasizibe pua zao." 
+                          data-en="Ducks consume more feed than chickens and love rice bran, maize bran, green vegetables, and small insects. It is crucial to provide plenty of clean water daily near their feeding troughs because they use water to clean their beaks while eating to prevent nostrils blockage.">
+                        Bata wanakula chakula kingi zaidi kuliko kuku na wanapenda pumba za mpunga, mahindi, mboga za majani, na wadudu wadogo wadogo. Ni muhimu kuwapa maji mengi na safi kila siku karibu na vyombo vyao vya chakula kwa sababu wanatumia maji kusafishia midomo yao wanapokula ili wasizibe pua zao.
+                    </span>
                 </div>
-                <p>Banda lao liwe na sehemu kavu ya kulala na eneo la wazi lenye kivuli kwa ajili ya mapumziko mchana.</p>
             </article>
 
-            <div class="back-home-container"><a href="index.html" class="back-btn">← Rudi Mwanzo</a></div>
-        </div>
-    </section>
+            <!-- SEHEMU YA 3: MAGONJWA MAKUBWA -->
+            <article class="main-article" style="margin-bottom: 25px;">
+                <h2 data-sw="3. Magonjwa Makubwa ya Bata na Kinga Zake 🦠" data-en="3. Major Duck Diseases & Prevention 🦠">3. Magonjwa Makubwa ya Bata na Kinga Zake 🦠</h2>
+                <div class="disease-list">
+                    <div class="disease-item" style="margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 15px;">
+                        <h4 data-sw="A. Homa ya Bata (Duck Plague)" data-en="A. Duck Plague (Duck Virus Enteritis)" style="color: #333; margin-bottom: 5px;">A. Homa ya Bata (Duck Plague)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Bata kuwa wanyonge, kutoa denda au majimaji puani na machoni, kuharisha kinyesi cha kijani chenye damu, na kushindwa kutembea." data-en="Weakness, discharge from eyes and nostrils, greenish watery diarrhea sometimes with blood, and inability to walk.">Bata kuwa wanyonge, kutoa denda au majimaji puani na machoni, kuharisha kinyesi cha kijani chenye damu, na kushindwa kutembea.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Kuhakikisha unapata bata kutoka vyanzo salama, kufanya usafi wa mara kwa mara wa banda na mabwawa ya maji, na kuwapa chanjo kulingana na ushauri wa daktari wa mifugo." data-en="Ensuring you get ducks from safe sources, regularly cleaning the coop and water ponds, and administering vaccinations according to veterinary advice.">Kuhakikisha unapata bata kutoka vyanzo salama, kufanya usafi wa mara kwa mara wa banda na mabwawa ya maji, na kuwapa chanjo kulingana na ushauri wa daktari wa mifugo.</span></p>
+                    </div>
+                    <div class="disease-item" style="margin-bottom: 20px; padding-bottom: 15px;">
+                        <h4 data-sw="B. Kipindupindu cha Ndege (Fowl Cholera)" data-en="B. Fowl Cholera in Ducks" style="color: #333; margin-bottom: 5px;">B. Kipindupindu cha Ndege (Fowl Cholera)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Vifo vya ghafula vya bata wengi shambani, magoti au viungo kuvimba, na kupumua kwa shida huku wakitoa sauti ya kukoroma." data-en="Sudden high mortality rates in the flock, swollen joints or footpads, and difficulty breathing accompanied by a rattling sound.">Vifo vya ghafula vya bata wengi shambani, magoti au viungo kuvimba, na kupumua kwa shida huku wakitoa sauti ya kukoroma.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Udhibiti:" data-en="Control:">Udhibiti:</strong> <span data-sw="Kutumia dawa za antibiotics zilizothibitishwa na daktari, na kuweka viuatilifu (disinfectants) mlangoni ili kuzuia kuingiza vijidudu vya ugonjwa shambani." data-en="Using antibiotics prescribed by a veterinarian, and placing disinfectants at the entrance to prevent introducing germs into the farm area.">Kutumia dawa za antibiotics zilizothibitishwa na daktari, na kuweka viuatilifu (disinfectants) mlangoni ili kuzuia kuingiza vijidudu vya ugonjwa shambani.</span></p>
+                    </div>
+                </div>
+            </article>
 
-    <footer><p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p></footer>
+            <!-- KITUFE CHA KURUDI NYUMA -->
+            <div class="back-home-container" style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="back-btn" data-sw="← Rudi Mwanzo" data-en="← Back Home" style="display: inline-block; background-color: #8e24aa; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; transition: background 0.3s;">← Rudi Mwanzo</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p>
+    </footer>
+
+    <!-- JAVASCRIPT YA KUBADILISHA LUGHA YA UKURASA MZIMA (SINGLE TOGGLE) -->
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                // Inatafuta elementi zote zenye data-sw na data-en ukurasa mzima (menu + maelezo)
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; // Kitufe kinarudi kuwa Kiswahili maneno yakitafsiriwa kuwa English
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; // Kitufe kinarudi kuwa English maneno yakitafsiriwa kuwa Kiswahili
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

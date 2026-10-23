@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kilimo na Mifugo Hub | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Kitufe kizuri cha Zambarau cha kubadilisha ukurasa mzima mara moja */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +37,7 @@
                 <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
                 <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
                 <li><a href="#maoni" data-sw="Toa Maoni" data-en="Feedback">Toa Maoni</a></li>
-                <!-- KITUFE CHA KUBADILISHA LUGHA -->
+                <!-- KITUFE KIKUU CHA ZAMBARAU CHA LUGHA -->
                 <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
@@ -83,6 +100,7 @@
         </div>
         
         <div class="grid-container">
+            
             <!-- 1. Kadi ya Kuku -->
             <div class="card">
                 <div class="card-icon">🐔</div>
@@ -109,17 +127,16 @@
                 <h3 data-sw="Ufugaji wa Mbwa" data-en="Dog Breeding">Ufugaji wa Mbwa</h3>
                 <p><span data-sw="Faida: Ulinzi wa uhakika wa shamba na biashara ya watoto." data-en="Benefits: Reliable farm security and profitable puppy business.">Faida: Ulinzi wa uhakika wa shamba na biashara ya watoto.</span></p>
                 <p><span data-sw="Hasara: Gharama kubwa za matunzo, chanjo, na chakula bora." data-en="Drawbacks: High maintenance costs, vaccines, and quality food.">Hasara: Gharama kubwa za matunzo, chanjo, na chakula bora.</span></p>
-                <p><span data-sw="Mazingira: Banda imara lenye uingizaji mzuri wa hewa na nafasi ya mazoezi." data-en="Housing: Sturdy kennel with good ventilation and exercise space.">Mazingira: Banda imara lenye uingizaji mzuri wa hewa na nafasi ya mazoezi.</span></p>
+                <p><span data-sw="Mazingira: Banda imara lenye uingizaji mzuri wa hewa na nafasi ya mazoezi." data-en="Housing: Secure, well-ventilated kennel with space for exercise.">Mazingira: Banda imara lenye uingizaji mzuri wa hewa na nafasi ya mazoezi.</span></p>
                 <a href="mbwa.html" class="card-btn" data-sw="Soma Elimu ya Mbwa" data-en="Read Dog Guide">Soma Elimu ya Mbwa</a>
             </div>
-
             <!-- 4. Kadi ya Mbuzi -->
             <div class="card">
                 <div class="card-icon">🐐</div>
                 <h3 data-sw="Ufugaji wa Mbuzi" data-en="Goat Farming">Ufugaji wa Mbuzi</h3>
-                <p><span data-sw="Faida: Wanazaa haraka (mapacha), maziwa yenye lishe, na nyama tamu." data-en="Benefits: Fast reproduction (twins), nutritious milk, and tasty meat.">Faida: Wanazaa haraka (mapacha), maziwa yenye lishe, na nyama tamu.</span></p>
-                <p><span data-sw="Hasara: Wana tabia ya kula na kuharibu miti au mazao yasiyolindwa." data-en="Drawbacks: Tendency to browse and damage unprotected trees or crops.">Hasara: Wana tabia ya kula na kuharibu miti au mazao yasiyolindwa.</span></p>
-                <p><span data-sw="Mazingira: Banda la sakafu ya mbao lililonyanyuka juu ili kuzuia unyevu." data-en="Housing: Raised wooden floor shed to prevent ground dampness.">Mazingira: Banda la sakafu ya mbao lililonyanyuka juu ili kuzuia unyevu.</span></p>
+                <p><span data-sw="Faida: Wanazaa haraka (mapacha), maziwa yenye lishe, na nyama tamu." data-en="Benefits: Fast reproduction (twins), nutritious milk, and sweet meat.">Faida: Wanazaa haraka (mapacha), maziwa yenye lishe, na nyama tamu.</span></p>
+                <p><span data-sw="Hasara: Wana tabia ya kula na kuharibu miti au mazao yasiyolindwa." data-en="Drawbacks: Destructive tendency to feed on young crops and unprotected trees.">Hasara: Wana tabia ya kula na kuharibu miti au mazao yasiyolindwa.</span></p>
+                <p><span data-sw="Mazingira: Banda la sakafu ya mbao lililonyanyuka juu ili kuzuia unyevu." data-en="Housing: Elevated wooden slatted floor shed to prevent moisture build-up.">Mazingira: Banda la sakafu ya mbao lililonyanyuka juu ili kuzuia unyevu.</span></p>
                 <a href="mbuzi.html" class="card-btn" data-sw="Soma Elimu ya Mbuzi" data-en="Read Goat Guide">Soma Elimu ya Mbuzi</a>
             </div>
 
@@ -127,58 +144,103 @@
             <div class="card">
                 <div class="card-icon">🐄</div>
                 <h3 data-sw="Ufugaji wa Ng'ombe" data-en="Cattle Farming">Ufugaji wa Ng'ombe</h3>
-
-                <p><span data-sw="Faida: Kipato kikubwa cha maziwa kila siku, nyama, na mbolea nyingi." data-en="Benefits: High daily milk income, meat, and plenty of manure.">Faida: Kipato kikubwa cha maziwa kila siku, nyama, na mbolea nyingi.</span></p>
-                <p><span data-sw="Hasara: Wanahitaji mtaji mkubwa wa kuanza na eneo kubwa la malisho." data-en="Drawbacks: Requires a large starting capital and big grazing fields.">Hasara: Wanahitaji mtaji mkubwa wa kuanza na eneo kubwa la malisho.</span></p>
-                <p><span data-sw="Mazingira: Banda kubwa lililoezekwa vizuri lenye sehemu safi ya kulia." data-en="Housing: Spacious, well-roofed shed with clean feeding stalls.">Mazingira: Banda kubwa lililoezekwa vizuri lenye sehemu safi ya kulia.</span></p>
+                <p><span data-sw="Faida: Kipato kikubwa cha maziwa kila siku, nyama, na mbolea nyingi." data-en="Benefits: High daily income from milk, beef, and abundance of manure.">Faida: Kipato kikubwa cha maziwa kila siku, nyama, na mbolea nyingi.</span></p>
+                <p><span data-sw="Hasara: Wanahitaji mtaji mkubwa wa kuanza na eneo kubwa la malisho." data-en="Drawbacks: Requires significant initial capital and a large grazing area.">Hasara: Wanahitaji mtaji mkubwa wa kuanza na eneo kubwa la malisho.</span></p>
+                <p><span data-sw="Mazingira: Banda kubwa lilileezekwa vizuri lenye sehemu safi ya kulia." data-en="Housing: Spacious, well-roofed shed with a clean feeding trough section.">Mazingira: Banda kubwa lililoezekwa vizuri lenye sehemu safi ya kulia.</span></p>
                 <a href="ng`ombe.html" class="card-btn" data-sw="Soma Elimu ya Ng'ombe" data-en="Read Cattle Guide">Soma Elimu ya Ng'ombe</a>
             </div>
 
-            <!-- 6. Kadi ya Kilimo -->
+            <!-- 6. Kadi ya Kilimo cha Mazao -->
             <div class="card">
                 <div class="card-icon">🌾</div>
                 <h3 data-sw="Kilimo cha Mazao" data-en="Crop Farming">Kilimo cha Mazao</h3>
-                <p><span data-sw="Faida: Uhakika wa chakula na kipato kikubwa cha msimu." data-en="Benefits: Food security and high seasonal income.">Faida: Uhakika wa chakula na kipato kikubwa cha msimu.</span></p>
-                <p><span data-sw="Hasara: Hutegemea sana mabadiliko ya hali ya hewa na wadudu." data-en="Drawbacks: Highly dependent on weather changes and pests.">Hasara: Hutegemea sana mabadiliko ya hali ya hewa and wadudu.</span></p>
-                <p><span data-sw="Mazingira: Udongo wenye rutuba, mifumo ya umwagiliaji, na jua." data-en="Housing: Fertile soil, irrigation systems, and adequate sunlight.">Mazingira: Udongo wenye rutuba, mifumo ya umwagiliaji, na jua.</span></p>
+                <p><span data-sw="Faida: Uhakika wa chakula na kipato kikubwa cha msimu." data-en="Benefits: Ensured food security and massive seasonal financial returns.">Faida: Uhakika wa chakula na kipato kikubwa cha msimu.</span></p>
+                <p><span data-sw="Hasara: Hutegemea sana mabadiliko ya hali ya hewa na wadudu." data-en="Drawbacks: Heavily dependent on weather changes and pest attacks.">Hasara: Hutegemea sana mabadiliko ya hali ya hewa and wadudu.</span></p>
+                <p><span data-sw="Mazingira: Udongo wenye rutuba, mifumo ya umwagiliaji, na jua." data-en="Housing: Fertile soil structure, proper irrigation, and adequate sunlight.">Mazingira: Udongo wenye rutuba, mifumo ya umwagiliaji, na jua.</span></p>
                 <a href="kilimo.html" class="card-btn" data-sw="Soma Elimu ya Kilimo" data-en="Read Crop Guide">Soma Elimu ya Kilimo</a>
             </div>
-        </div>
 
+        </div>
     </section>
 
-    <!-- 5. SEHEMU YA MAONI -->
-       <!-- 5. SEHEMU YA MAONI (FEEDBACK FORM - MULTI-LANGUAGE) -->
-    <section id="maoni" class="feedback-section">
-        <div class="section-title">
-            <h2 data-sw="Toa Maoni au Maswali Yako" data-en="Leave Your Feedback or Questions">Toa Maoni au Maswali Yako</h2>
-            <p data-sw="Tutumie ujumbe wako na timu ya Shamba Kidijitali itakujibu haraka." data-en="Send us your message and the Shamba Kidijitali team will reply swiftly.">Tutumie ujumbe wako na timu ya Shamba Kidijitali itakujibu haraka.</p>
-        </div>
-        <div class="form-container">
-            <form action="#" method="POST" class="feedback-form">
-                <div class="form-group">
-                    <label for="name" data-sw="Jina Lako:" data-en="Your Name:">Jina Lako:</label>
-                    <!-- JavaScript itabadilisha na 'placeholder' kwa kutumia njia hii -->
-                    <input type="text" id="name" name="name" placeholder="Andika jina lako kamili" data-sw-placeholder="Andika jina lako kamili" data-en-placeholder="Write your full name" required>
+    <!-- 5. SEHEMU YA MAONI (FORMSPREE) -->
+    <section id="maoni" class="feedback-section" style="padding: 40px 20px; background: #fff; margin-top: 40px;">
+        <div class="feedback-container" style="max-width: 600px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 30px; border-radius: 8px;">
+            <h2 data-sw="Toa Maoni au Maswali Yako" data-en="Give Your Feedback or Questions" style="color: #2e7d32; text-align: center; margin-bottom: 20px;">Toa Maoni au Maswali Yako</h2>
+            <form action="https://formspree.io" method="POST">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="name" data-sw="Jina Lako:" data-en="Your Name:" style="display: block; font-weight: bold; margin-bottom: 5px;">Jina Lako:</label>
+                    <input type="text" id="name" name="name" required placeholder="Mf. Daniel Charles" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                 </div>
-                <div class="form-group">
-                    <label for="email" data-sw="Barua Pepe (Email):" data-en="Email Address:">Barua Pepe (Email):</label>
-                    <input type="email" id="email" name="email" placeholder="Mfano: jina@gmail.com" data-sw-placeholder="Mfano: jina@gmail.com" data-en-placeholder="Example: name@gmail.com" required>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="email" data-sw="Barua Pepe (Email):" data-en="Email Address:" style="display: block; font-weight: bold; margin-bottom: 5px;">Barua Pepe (Email):</label>
+                    <input type="email" id="email" name="_replyto" required placeholder="danielcharlesnjau@gmail.com" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                 </div>
-                <div class="form-group">
-                    <label for="message" data-sw="Ujumbe/Maoni Yako:" data-en="Your Message/Feedback:">Ujumbe/Maoni Yako:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Andika maoni au ushauri wako hapa..." data-sw-placeholder="Andika maoni au ushauri wako hapa..." data-en-placeholder="Write your feedback or advice here..." required></textarea>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="message" data-sw="Ujumbe/Maoni Yako:" data-en="Your Message/Feedback:" style="display: block; font-weight: bold; margin-bottom: 5px;">Ujumbe/Maoni Yako:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Andika maoni yako hapa..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
                 </div>
-                <button type="submit" class="submit-btn" data-sw="Tuma Ujumbe" data-en="Send Message">Tuma Ujumbe</button>
+                <button type="submit" class="submit-btn" data-sw="Tuma Ujumbe" data-en="Send Message" style="background-color: #2e7d32; color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; width: 100%; cursor: pointer;">Tuma Ujumbe</button>
             </form>
         </div>
     </section>
 
     <!-- 6. FOOTER -->
-    <footer>
-        <p>&copy; 2026 Shamba Kidijitali. <span data-sw="Imetengenezwa na" data-en="Developed by">Imetengenezwa na</span> <span>mr web</span>.</p>
+    <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p data-sw="&copy; 2026 Shamba Kidijitali. Imetengenezwa na mr web." data-en="&copy; 2026 Shamba Kidijitali. Developed by mr web.">&copy; 2026 Shamba Kidijitali. Imetengenezwa na mr web.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- 7. JAVASCRIPT (SLIDESHOW & GLOBAL LANGUAGE TOGGLE) -->
+    <script>
+        // A. JS YA SLIDESHOW
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+
+        function showSlide(index) {
+            if (slides.length === 0) return;
+            slides.forEach(slide => slide.classList.remove('active'));
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            slides[currentSlide].classList.add('active');
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentSlide++;
+                showSlide(currentSlide);
+            });
+            prevBtn.addEventListener('click', () => {
+                currentSlide--;
+                showSlide(currentSlide);
+            });
+            setInterval(() => {
+                currentSlide++;
+                showSlide(currentSlide);
+            }, 5000);
+        }
+
+        // B. SWICHI YA KUBADILISHA UKURASA MZIMA KWA MARA MOJA (GLOBAL)
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                // Inatafuta kila mstari wenye data-sw na data-en ukurasa mzima (pamoja na kadi zote!)
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili';
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English';
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -3,99 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mwongozo wa Ufugaji wa Kuku | Shamba Kidijitali</title>
+    <title>Elimu ya Ufugaji wa Kuku | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        
+        body {
+            background-color: #f4f4f9; 
+        }
+        .inner-page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('kuku.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .inner-header-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .main-article h2 {
+            color: #8e24aa;
+            margin-bottom: 12px;
+        }
+        .info-alert {
+            background-color: #f3e5f5;
+            border-left: 5px solid #8e24aa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- 1. NAVIGATION BAR (MENU) -->
     <header class="navbar">
         <div class="logo">
             <h2>Shamba<span>Kidijitali</span></h2>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
-                <li><a href="index.html#maoni">Toa Maoni</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
-    <!-- KICHWA CHA UKURASA (HERO BANNER) -->
-    <section class="page-header-kuku">
-        <div class="header-overlay">
-            <h1>Ufugaji wa Kuku wa Kisasa na Kienyeji</h1>
-            <p>Shule kamili kuhusu usimamizi wa mabanda, lishe bora, na siri za kupata faida kubwa.</p>
+    <!-- 2. HERO BANNER -->
+    <section class="inner-page-hero">
+        <div class="inner-header-overlay">
+            <h1 data-sw="Ufugaji wa Kuku wa Kisasa" data-en="Modern Poultry Farming">Ufugaji wa Kuku wa Kisasa</h1>
+            <p data-sw="Mwongozo wa kina kuhusu malezi ya vifaranga, chakula bora, na kinga dhidi ya magonjwa ya milipuko." 
+               data-en="A comprehensive guide on chick brooding, quality feed selection, and prevention against outbreak diseases.">
+               Mwongozo wa kina kuhusu malezi ya vifaranga, chakula bora, na kinga dhidi ya magonjwa ya milipuko.
+            </p>
         </div>
     </section>
 
-    <!-- ELIMU YA NDANI YA KUKU -->
-    <section class="content-section">
+    <!-- 3. ELIMU YA NDANI YA KUKU -->
+    <main class="content-section">
         <div class="content-container">
             
             <!-- SEHEMU YA 1: UTANGULIZI -->
             <article class="main-article">
-                <h2>1. Kuanza Ufugaji wa Kuku 🐔</h2>
-                <p>
-                    Ufugaji wa kuku ni moja kati ya miradi inayolipa kwa haraka sana kutokana na uhitaji mkubwa wa nyama na mayai sokoni. Unaweza kuchagua kufuga kuku wa kienyeji walioboreshwa, kuku wa nyama (Broilers), au kuku wa mayai (Layers). Kila aina ya kuku ina mfumo wake wa utunzaji na soko tofauti.
+                <h2 data-sw="1. Fursa Zilizopo Kwenye Ufugaji wa Kuku" data-en="1. Opportunities in Poultry Farming">1. Fursa Zilizopo Kwenye Ufugaji wa Kuku</h2>
+                <p data-sw="Ufugaji wa kuku (wa kienyeji, chotara, au wa kisasa wa mayai na nyama) ni mradi wa haraka sana unaoleta faida kubwa nchini Tanzania. Mayai na nyama ya kuku vina soko la uhakika kila siku kwenye mahoteli, migahawa na majumbani kwa sababu ya uhitaji mkubwa wa protini."
+                   data-en="Poultry farming (indigenous, crossbreeds, or modern layers and broilers) is a fast income-generating project with high profits in Tanzania. Chicken meat and eggs have a guaranteed daily market in hotels, restaurants, and households due to high protein demand.">
+                   Ufugaji wa kuku (wa kienyeji, chotara, au wa kisasa wa mayai na nyama) ni mradi wa haraka sana unaoleta faida kubwa nchini Tanzania. Mayai na nyama ya kuku vina soko la uhakika kila siku kwenye mahoteli, migahawa na majumbani kwa sababu ya uhitaji mkubwa wa protini.
                 </p>
             </article>
-
-            <!-- SEHEMU YA 2: LISHE BORA YA KUKU -->
+            <!-- SEHEMU YA 2: LISHE -->
             <article class="main-article">
-                <h2>2. Mwongozo wa Chakula na Lishe kulingana na Umri</h2>
-                <p>Chakula bora ndio msingi wa kuku kukua haraka na kutaga mayai mengi. Mfugaji lazima azingatie mabadiliko haya ya chakula:</p>
-                <ul>
-                    <li><strong>Wiki ya 1 hadi 8 (Vifaranga):</strong> Wapewe chakula cha <em>Chick Starter Mash</em> chenye protini nyingi ili kukuza miili na mifupa yao haraka.</li>
-                    <li><strong>Wiki ya 9 hadi 20 (Kukua):</strong> Wapewe chakula cha <em>Growers Mash</em> ili kuwaandaa vizuri kabla ya kuanza kutaga bila kuwapa mafuta mengi mwilini.</li>
-                    <li><strong>Wiki ya 21 na Kuendelea (Kutaga):</strong> Wapewe chakula cha <em>Layers Mash</em> kilichochanganywa na madini ya chokaa (Calcium) kwa ajili ya kuifanya maganda ya mayai kuwa magumu na imara.</li>
-                </ul>
-            </article>
-
-            <!-- SEHEMU YA 3: MAZINGIRA BORA YA BANDA -->
-            <article class="main-article">
-                <h2>3. Muundo na Mazingira ya Banda Bora la Kuku</h2>
-                <p>Banda bora litalinda kuku wako dhidi ya maadui (kama vicheche na mwewe) na magonjwa ya baridi. Sifa za banda bora ni:</p>
+                <h2 data-sw="2. Lishe Bora na Ulishaji" data-en="2. Proper Nutrition and Feeding">2. Lishe Bora na Ulishaji</h2>
                 <div class="info-alert">
-                    <strong>Kanuni ya Banda:</strong> Banda linatakiwa kuruhusu hewa safi kuingia na kutoka (ventilation) lakini lisiruhusu upepo mkali wa baridi kupiga moja kwa moja chini mahali walipo kuku, kwani upepo huleta ugonjwa wa mafua makali (Coryza).
+                    <strong data-sw="Aina za Chakula:" data-en="Feed Types:">Aina za Chakula:</strong>
+                    <span data-sw="Vifaranga wapewe Starter Mash kwa wiki 4 za mwanzo ili kukuza mifupa na miili haraka. Kuku wa nyama hupewa Broiler Finisher, na wale wa mayai huwekewa Layers Mash yenye madini ya kalsiamu (Calcium) ili maganda ya mayai yawe imara." 
+                          data-en="Chicks should be fed Starter Mash for the first 4 weeks to grow strong bones and bodies quickly. Broilers require Broiler Finisher, while layers need Layers Mash packed with Calcium to produce strong, high-quality eggshells.">
+                        Vifaranga wapewe Starter Mash kwa wiki 4 za mwanzo ili kukuza mifupa na miili haraka. Kuku wa nyama hupewa Broiler Finisher, na wale wa mayai huwekewa Layers Mash yenye madini ya kalsiamu (Calcium) ili maganda ya mayai yawe imara.
+                    </span>
                 </div>
-                <ul>
-                    <li><strong>Sakafu:</strong> Weka maranda ya mbao (sio vumbi la mbao) yenye unene wa nchi 2 hadi 3 ili kufyonza unyevu wa kinyesi.</li>
-                    <li><strong>Nafasi:</strong> Epuka kujaza kuku wengi eneo dogo ili kuzuia tabia ya kudonoana na kuibuka kwa joto kali linalosababisha vifo.</li>
-                </ul>
             </article>
 
-            <!-- SEHEMU YA 4: MAGONJWA YALIYOPO YA KUKU -->
+            <!-- SEHEMU YA 3: MAGONJWA -->
             <article class="main-article">
-                <h2>4. Magonjwa Hatari ya Kuku na Udhibiti Wake 🦠</h2>
+                <h2 data-sw="3. Magonjwa Hatari ya Kuku na Tiba" data-en="3. Dangerous Chicken Diseases & Treatment">3. Magonjwa Hatari ya Kuku na Tiba</h2>
                 <div class="disease-list">
-                    <div class="disease-item">
-                        <h4>A. Kideri / Mdondo (Newcastle Disease)</h4>
-                        <p><strong>Dalili:</strong> Kuku kuzungusha kichwa, kupinda shingo, kuharisha kinyesi cha kijani, na vifo vya ghafula vya kuku wengi kwa pamoja.</p>
-                        <p><strong>Tiba:</strong> Ugonjwa huu hauna tiba ukishajiingiza bandani. Kinga yake ya pekee ni kuwapa **chanjo ya Kideri** kila baada ya miezi mitatu.</p>
+                    <!-- Ugonjwa A: Kideri -->
+                    <div class="disease-item" style="margin-bottom: 20px; border-bottom: 1px dashed #ccc; padding-bottom: 15px;">
+                        <h4 data-sw="A. Mdondo / Kideri (Newcastle Disease)" data-en="A. Newcastle Disease (Mdondo)" style="color: #333; margin-bottom: 5px;">A. Mdondo / Kideri (Newcastle Disease)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Kuku kuzungusha kichwa, kupinda shingo, kuharisha kinyesi cha kijani kibichi, na vifo vya ghafula vya kuku wengi kwa pamoja." data-en="Twisted necks, spinning heads, watery greenish diarrhea, and high sudden mortality rates across the flock.">Kuku kuzungusha kichwa, kupinda shingo, kuharisha kinyesi cha kijani kibichi, na vifo vya ghafula vya kuku wengi kwa pamoja.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Ugonjwa huu hauna tiba ukishatokea. Kinga pekee ni kuwapa chanjo ya Kideri (Newcastle Vaccine) kila baada ya miezi 3." data-en="This virus has no cure once it strikes. The only effective prevention is administering the Newcastle vaccine every 3 months.">Ugonjwa huu hauna tiba ukishatokea. Kinga pekee ni kuwapa chanjo ya Kideri (Newcastle Vaccine) kila baada ya miezi 3.</span></p>
                     </div>
-                    <div class="disease-item">
-                        <h4>B. Ndui ya Kuku (Fowl Pox)</h4>
-                        <p><strong>Dalili:</strong> Sehemu zisizo na manyoya (kama vile vilembe na machoni) zinatoa majeraha au vipele vyeusi vinavyofanya kuku washindwe kula.</p>
-                        <p><strong>Tiba:</strong> Hakuna tiba ya virusi hivi, lakini unaweza kusafisha vipele kwa iodini na kuwapa vitamini. Kinga yake ni chanjo ya ndui wanapokuwa na umri wa wiki ya 6 hadi 8.</p>
+                    <!-- Ugonjwa B: Gumboro -->
+                    <div class="disease-item" style="margin-bottom: 20px; padding-bottom: 15px;">
+                        <h4 data-sw="B. Gumboro (Infectious Bursal Disease)" data-en="B. Gumboro Disease" style="color: #333; margin-bottom: 5px;">B. Gumboro (Infectious Bursal Disease)</h4>
+                        <p style="margin: 5px 0;"><strong data-sw="Dalili:" data-en="Symptoms:">Dalili:</strong> <span data-sw="Vifaranga kusimama manyoya, kujificha pembeni mwa banda, kuharisha kinyesi cheupe cha majimaji, na kudona sehemu za siri." data-en="Chicks with ruffled feathers, huddling in corners, watery whitish diarrhea, and picking at their vent areas.">Vifaranga kusimama manyoya, kujificha pembeni mwa banda, kuharisha kinyesi cheupe cha majimaji, na kudona sehemu za siri.</span></p>
+                        <p style="margin: 5px 0;"><strong data-sw="Kinga:" data-en="Prevention:">Kinga:</strong> <span data-sw="Kuwapa chanjo ya Gumboro wakiwa na umri wa siku ya 7 na kurudia siku ya 14 au 21 kulingana na muongozo wa daktari." data-en="Administer Gumboro vaccine on day 7 and repeat on day 14 or 21 according to veterinary guidelines.">Kuwapa chanjo ya Gumboro wakiwa na umri wa siku ya 7 na kurudia siku ya 14 au 21 kulingana na muongozo wa daktari.</span></p>
                     </div>
                 </div>
             </article>
 
-            <div class="back-home-container">
-                <a href="index.html" class="back-btn">← Rudi Mwanzo</a>
+            <!-- KITUFE CHA KURUDI NYUMA -->
+            <div class="back-home-container" style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="back-btn" data-sw="← Rudi Mwanzo" data-en="← Back Home" style="display: inline-block; background-color: #8e24aa; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; transition: background 0.3s;">← Rudi Mwanzo</a>
             </div>
 
         </div>
-    </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
         <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na <span>mr web</span>.</p>
     </footer>
 
+    <!-- JAVASCRIPT YA KUBADILISHA LUGHA YA UKURASA MZIMA (SINGLE TOGGLE) -->
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                // Inatafuta elementi zote zenye data-sw na data-en ukurasa mzima (menu + maelezo)
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; // Kitufe kinabadilika jina kuwa Kiswahili
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; // Kitufe kinabadilika jina kuwa English
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
