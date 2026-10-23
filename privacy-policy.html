@@ -6,6 +6,24 @@
     <title>Privacy Policy - Sera ya Faragha | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        body {
+            background-color: #f4f4f9; 
+        }
         .policy-container {
             max-width: 800px;
             margin: 40px auto;
@@ -16,7 +34,7 @@
             line-height: 1.8;
         }
         .policy-container h1, .policy-container h2 {
-            color: #2e7d32;
+            color: #8e24aa;
             margin-bottom: 15px;
         }
         .policy-container p {
@@ -32,35 +50,63 @@
         <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
     <main class="policy-container">
-        <h1>Sera ya Faragha (Privacy Policy)</h1>
-        <p>Kwenye <strong>Shamba Kidijitali</strong>, faragha ya wageni wetu ni jambo la msingi sana kwetu. Waraka huu wa sera ya faragha unaeleza aina za taarifa za kibinafsi zinazokusanywa na kurekodiwa na Shamba Kidijitali na jinsi tunavyozitumia.</p>
+        <h1 data-sw="Sera ya Faragha (Privacy Policy)" data-en="Privacy Policy">Sera ya Faragha (Privacy Policy)</h1>
+        <p data-sw="Kwenye Shamba Kidijitali, faragha ya wageni wetu ni jambo la msingi sana kwetu. Waraka huu wa sera ya faragha unaeleza aina za taarifa za kibinafsi zinazokusanywa na kurekodiwa na Shamba Kidijitali na jinsi tunavyozitumia."
+           data-en="At Shamba Kidijitali, the privacy of our visitors is of paramount importance to us. This privacy policy document outlines the types of personal information collected and recorded by Shamba Kidijitali and how we use it.">
+           Kwenye Shamba Kidijitali, faragha ya wageni wetu ni jambo la msingi sana kwetu. Waraka huu wa sera ya faragha unaeleza aina za taarifa za kibinafsi zinazokusanywa na kurekodiwa na Shamba Kidijitali na jinsi tunavyozitumia.
+        </p>
 
-        <h2>1. Faili za Kumbukumbu (Log Files)</h2>
-        <p>Shamba Kidijitali inafuata utaratibu wa kawaida wa kutumia faili za kumbukumbu. Faili hizi hurekodi wageni wanapotembelea tovuti. Taarifa zinazokusanywa ni pamoja na anuani za IP, aina ya kivinjari (browser), Mtoa Huduma wa Mtandao (ISP), tarehe na muda, na idadi ya mibofyo (clicks). Taarifa hizi hazihusiani na taarifa zozote zinazoweza kumtambulisha mtu binafsi.</p>
+        <h2 data-sw="1. Faili za Kumbukumbu (Log Files)" data-en="1. Log Files">1. Faili za Kumbukumbu (Log Files)</h2>
+        <p data-sw="Shamba Kidijitali inafuata utaratibu wa kawaida wa kutumia faili za kumbukumbu. Faili hizi hurekodi wageni wanapotembelea tovuti. Taarifa zinazokusanywa ni pamoja na anuani za IP, aina ya kivinjari (browser), Mtoa Huduma wa Mtandao (ISP), tarehe na muda, na idadi ya mibofyo (clicks)."
+           data-en="Shamba Kidijitali follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected includes IP addresses, browser type, Internet Service Provider (ISP), date and time stamp, and number of clicks.">
+           Shamba Kidijitali inafuata utaratibu wa kawaida wa kutumia faili za kumbukumbu. Faili hizi hurekodi wageni wanapotembelea tovuti. Taarifa zinazokusanywa ni pamoja na anuani za IP, aina ya kivinjari (browser), Mtoa Huduma wa Mtandao (ISP), tarehe na muda, na idadi ya mibofyo (clicks).
+        </p>
 
-        <h2>2. Vidakuzi vya Google DoubleClick DART (Cookies)</h2>
-        <p>Google ni mmoja wa washirika wetu wa matangazo. Google hutumia vidakuzi (cookies), vinavyojulikana kama vidakuzi vya DART, kuonyesha matangazo kwa wageni wa tovuti yetu kulingana na ziara zao kwenye Shamba Kidijitali na tovuti nyingine kwenye mtandao.</p>
+        <h2 data-sw="2. Vidakuzi vya Google DoubleClick DART (Cookies)" data-en="2. Google DoubleClick DART Cookies">2. Vidakuzi vya Google DoubleClick DART (Cookies)</h2>
+        <p data-sw="Google ni mmoja wa washirika wetu wa matangazo. Google hutumia vidakuzi, vinavyojulikana kama vidakuzi vya DART, kuonyesha matangazo kwa wageni wa tovuti yetu kulingana na ziara zao kwenye Shamba Kidijitali na tovuti nyingine kwenye mtandao."
+           data-en="Google is one of the third-party vendors on our site. It uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to Shamba Kidijitali and other sites on the internet.">
+           Google ni mmoja wa washirika wetu wa matangazo. Google hutumia vidakuzi, vinavyojulikana kama vidakuzi vya DART, kuonyesha matangazo kwa wageni wa tovuti yetu kulingana na ziara zao kwenye Shamba Kidijitali na tovuti nyingine kwenye mtandao.
+        </p>
 
-        <h2>3. Sera za Washirika wa Matangazo (Google AdSense)</h2>
-        <p>Tovuti yetu inatumia Google AdSense kuonyesha matangazo ya kibiashara. Google AdSense hutumia teknolojia kama cookies au Web Beacons ambazo hutumwa moja kwa moja kwenye kivinjari cha mtumiaji. Wanapokea anwani yako ya IP kiotomatiki hili linapotokea. Teknolojia hizi hutumiwa kupima ufanisi wa kampeni zao za matangazo na/au kubinafsisha maudhui ya matangazo unayoyaona.</p>
-        <p>Tafadhali kumbuka kuwa Shamba Kidijitali haina ufikiaji au udhibiti wa vidakuzi hivi vinavyotumiwa na watangazaji wa kibiashara wa watu wengine.</p>
-
-        <h2>4. Idhini Yako</h2>
-        <p>Kwa kutumia tovuti yetu, unakubaliana na Sera yetu ya Faragha na kukubali Vigezo na Masharti yake.</p>
+        <h2 data-sw="3. Sera za Washirika wa Matangazo (Google AdSense)" data-en="3. Advertising Partners Policies (Google AdSense)">3. Sera za Washirika wa Matangazo (Google AdSense)</h2>
+        <p data-sw="Tovuti yetu inatumia Google AdSense kuonyesha matangazo ya kibiashara. Google AdSense hutumia teknolojia kama cookies au Web Beacons ambazo hutumwa moja kwa moja kwenye kivinjari cha mtumiaji. Wanapokea anwani yako ya IP kiotomatiki hili linapotokea."
+           data-en="Our website uses Google AdSense to display commercial advertisements. Google AdSense uses technologies like cookies or Web Beacons that are sent directly to the user's browser. They automatically receive your IP address when this occurs.">
+           Tovuti yetu inatumia Google AdSense kuonyesha matangazo ya kibiashara. Google AdSense hutumia teknolojia kama cookies au Web Beacons ambazo hutumwa moja kwa moja kwenye kivinjari cha mtumiaji. Wanapokea anwani yako ya IP kiotomatiki hili linapotokea.
+        </p>
     </main>
 
     <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
         <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na mr web.</p>
     </footer>
 
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; 
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; 
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

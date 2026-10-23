@@ -6,6 +6,24 @@
     <title>Terms & Conditions - Vigezo na Masharti | Shamba Kidijitali</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* CSS ya Kitufe cha Lugha cha Zambarau kule Juu kwenye Header */
+        .lang-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background-color: #7b1fa2;
+        }
+        body {
+            background-color: #f4f4f9; 
+        }
         .terms-container {
             max-width: 800px;
             margin: 40px auto;
@@ -16,7 +34,7 @@
             line-height: 1.8;
         }
         .terms-container h1, .terms-container h2 {
-            color: #2e7d32;
+            color: #8e24aa;
             margin-bottom: 15px;
         }
         .terms-container p {
@@ -32,34 +50,57 @@
         <div class="logo"><h2>Shamba<span>Kidijitali</span></h2></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Mwanzo</a></li>
-                <li><a href="kilimo.html">Elimu ya Kilimo</a></li>
-                <li><a href="mifugo.html">Elimu ya Mifugo</a></li>
-                <li><a href="magonjwa.html">Magonjwa & Tiba</a></li>
+                <li><a href="index.html" data-sw="Mwanzo" data-en="Home">Mwanzo</a></li>
+                <li><a href="kilimo.html" data-sw="Elimu ya Kilimo" data-en="Crop Farming">Elimu ya Kilimo</a></li>
+                <li><a href="mifugo.html" data-sw="Elimu ya Mifugo" data-en="Livestock Farming">Elimu ya Mifugo</a></li>
+                <li><a href="magonjwa.html" data-sw="Magonjwa & Tiba" data-en="Diseases & Cure">Magonjwa & Tiba</a></li>
+                <!-- KITUFE KIKUU JUU KWENYE HEADER -->
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
         </nav>
     </header>
 
     <main class="terms-container">
-        <h1>Vigezo na Masharti (Terms & Conditions)</h1>
-        <p>Karibu kwenye <strong>Shamba Kidijitali</strong>. Kwa kuingia na kutumia tovuti hii, unakubaliana na unafungwa na vigezo na masharti yafuatayo. Kama hukubaliani na sehemu yoyote ya masharti haya, tafadhali usitumie tovuti yetu.</p>
+        <h1 data-sw="Vigezo na Masharti (Terms & Conditions)" data-en="Terms & Conditions">Vigezo na Masharti (Terms & Conditions)</h1>
+        <p data-sw="Karibu kwenye Shamba Kidijitali. Kwa kuingia na kutumia tovuti hii, unakubaliana na unafungwa na vigezo na masharti yafuatayo. Kama hukubaliani na sehemu yoyote ya masharti haya, tafadhali usitumie tovuti yetu."
+           data-en="Welcome to Shamba Kidijitali. By accessing and using this website, you accept and agree to be bound by the following terms and conditions. If you disagree with any part of these terms, please do not use our website.">
+           Karibu kwenye Shamba Kidijitali. Kwa kuingia na kutumia tovuti hii, unakubaliana na unafungwa na vigezo na masharti yafuatayo. Kama hukubaliani na sehemu yoyote ya masharti haya, tafadhali usitumie tovuti yetu.
+        </p>
 
-        <h2>1. Matumizi ya Maudhui</h2>
-        <p>Maudhui yote yaliyopo kwenye tovuti hii, yakiwemo maandishi, picha, na miongozo ya kilimo na ufugaji, ni kwa ajili ya kutoa elimu na mwongozo wa jumla tu. Maudhui haya yanaweza kubadilishwa wakati wowote bila taarifa.</p>
+        <h2 data-sw="1. Matumizi ya Maudhui" data-en="1. Content Usage">1. Matumizi ya Maudhui</h2>
+        <p data-sw="Maudhui yote yaliyopo kwenye tovuti hii, yakiwemo maandishi, picha, na miongozo ya kilimo na ufugaji, ni kwa ajili ya kutoa elimu na mwongozo wa jumla tu. Maudhui haya yanaweza kubadilishwa wakati wowote bila taarifa."
+           data-en="All content provided on this website, including text, images, and agricultural guides, is for general educational purposes only. This content is subject to change without notice.">
+           Maudhui yote yaliyopo kwenye tovuti hii, yakiwemo maandishi, picha, na miongozo ya kilimo na ufugaji, ni kwa ajili ya kutoa elimu na mwongozo wa jumla tu. Maudhui haya yanaweza kubadilishwa wakati wowote bila taarifa.
+        </p>
 
-        <h2>2. Hakimiliki (Copyright)</h2>
-        <p>Kazi zote zilizochapishwa hapa zinalindwa chini ya hakimiliki ya Shamba Kidijitali na wasanifu wake. Unaruhusiwa kusoma, kushea link, na kutumia elimu hii kwa matumizi yako binafsi ya kishamba, lakini ni marufuku ku-copy na kuuza maudhui haya kwenye tovuti nyingine bila idhini ya maandishi kutoka kwetu.</p>
-
-        <h2>3. Kanusho la Dhamana (Disclaimer)</h2>
-        <p>Ingawa tunajitahidi kutoa taarifa sahihi na miongozo bora ya matibabu ya wanyama na kilimo, Shamba Kidijitali haitoi dhamana ya 100% kwamba mbinu hizi zitafanya kazi sawa kwenye kila mazingira. Ni vizuri kushauriana na daktari wa mifugo au afisa ugani wa karibu yako kabla ya kufanya maamuzi makubwa ya kitabibu au uwekezaji mkubwa.</p>
-
-        <h2>4. Marekebisho ya Masharti</h2>
-        <p>Shamba Kidijitali ina haki ya kubadili vigezo na masharti haya wakati wowote. Kwa kuendelea kutumia tovuti hii baada ya mabadiliko, unakubali kufuata masharti yaliyorekebishwa.</p>
+        <h2 data-sw="2. Hakimiliki (Copyright)" data-en="2. Copyright">2. Hakimiliki (Copyright)</h2>
+        <p data-sw="Kazi zote zilizochapishwa hapa zinalindwa chini ya hakimiliki ya Shamba Kidijitali na wasanifu wake. Unaruhusiwa kusoma, kushea link, na kutumia elimu hii kwa matumizi yako binafsi ya kishamba, lakini ni marufuku ku-copy na kuuja maudhui haya kwenye tovuti nyingine bila idhini ya maandishi kutoka kwetu."
+           data-en="All works published here are protected under the copyright of Shamba Kidijitali and its developers. You are allowed to read, share links, and use this knowledge for personal farming use, but copying and selling this content on other sites without written permission is strictly prohibited.">
+           Kazi zote zilizochapishwa hapa zinalindwa chini ya hakimiliki ya Shamba Kidijitali na wasanifu wake. Unaruhusiwa kusoma, kushea link, na kutumia elimu hii kwa matumizi yako binafsi ya kishamba, lakini ni marufuku ku-copy na kuuja maudhui haya kwenye tovuti nyingine bila idhini ya maandishi kutoka kwetu.
+        </p>
     </main>
 
     <footer style="background-color: #1b5e20; color: white; text-align: center; padding: 20px; margin-top: 40px;">
         <p>&copy; 2026 Shamba Kidijitali. Imetengenezwa na mr web.</p>
     </footer>
 
+    <script>
+        const globalLangBtn = document.getElementById('lang-toggle');
+        let currentGlobalLang = 'sw';
+        if (globalLangBtn) {
+            globalLangBtn.addEventListener('click', () => {
+                const allElements = document.querySelectorAll('[data-sw][data-en]');
+                if (currentGlobalLang === 'sw') {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-en'));
+                    globalLangBtn.textContent = 'Kiswahili'; 
+                    currentGlobalLang = 'en';
+                } else {
+                    allElements.forEach(el => el.textContent = el.getAttribute('data-sw'));
+                    globalLangBtn.textContent = 'English'; 
+                    currentGlobalLang = 'sw';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
